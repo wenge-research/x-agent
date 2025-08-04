@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img/文件</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="50" height="50"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="98.4106957%" id="linearGradient-3">
+            <stop stop-color="#E9F0F9" offset="0%"></stop>
+            <stop stop-color="#E8EEFE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="73.6654009%" y1="74.113082%" x2="20.327596%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#B4BDFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#B5BCFF" stop-opacity="0.376633864" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-73.7%" y="-66.7%" width="247.4%" height="232.8%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="67.1542673%" y1="55.605633%" x2="13.751994%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#EDF2FF" offset="0%"></stop>
+            <stop stop-color="#B5BCFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="雅意0426-浅色" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图整理" transform="translate(-268.000000, -576.000000)">
+            <g id="编组" transform="translate(268.000000, 576.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="蒙版"></g>
+                <g mask="url(#mask-2)">
+                    <g transform="translate(6.000000, 1.000000)">
+                        <path d="M4,0 L23.2025095,0 L23.2025095,0 L37.7142857,14.9375989 L37.7142857,44 C37.7142857,46.209139 35.9234247,48 33.7142857,48 L4,48 C1.790861,48 2.705415e-16,46.209139 0,44 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z" id="矩形" fill="url(#linearGradient-3)"></path>
+                        <path d="M5.14285714,12 L18,12 L18,13.7142857 L5.14285714,13.7142857 L5.14285714,12 Z M5.14285714,7.71428571 L18,7.71428571 L18,9.42857143 L5.14285714,9.42857143 L5.14285714,7.71428571 Z M5.14285714,17.1428571 L18,17.1428571 L18,18.8571429 L5.14285714,18.8571429 L5.14285714,17.1428571 Z M5.14285714,30.8571429 L30.8571429,30.8571429 L30.8571429,32.5714286 L5.14285714,32.5714286 L5.14285714,30.8571429 Z M5.14285714,35.1428571 L30.8571429,35.1428571 L30.8571429,36.8571429 L5.14285714,36.8571429 L5.14285714,35.1428571 Z M5.14285714,39.4285714 L30.8571429,39.4285714 L30.8571429,41.1428571 L5.14285714,41.1428571 L5.14285714,39.4285714 Z M5.14285714,25.7142857 L30.8571429,25.7142857 L30.8571429,27.4285714 L5.14285714,27.4285714 L5.14285714,25.7142857 Z M5.14285714,21.4285714 L30.8571429,21.4285714 L30.8571429,23.1428571 L5.14285714,23.1428571 L5.14285714,21.4285714 Z" id="形状结合" fill="#D3DEFC"></path>
+                        <path d="M21.4285714,0 L37.7142857,17.6450388 L25.5157342,17.9109167 C23.3071197,17.9590554 21.4776599,16.2076437 21.4295212,13.9990293 C21.428888,13.9699793 21.4285714,13.9409234 21.4285714,13.9118665 L21.4285714,0 L21.4285714,0 Z" id="矩形" fill="url(#linearGradient-4)" filter="url(#filter-5)"></path>
+                        <path d="M23.1428571,0 L37.7142857,14.5714286 L27.1428571,14.5714286 C24.9337181,14.5714286 23.1428571,12.7805676 23.1428571,10.5714286 L23.1428571,0 L23.1428571,0 Z" id="矩形" fill="url(#linearGradient-6)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

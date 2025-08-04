@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="112px" height="112px" viewBox="0 0 112 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/大模型/雅意</title>
+    <defs>
+        <linearGradient x1="49.9900735%" y1="0%" x2="49.9900735%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#0065F9" offset="9%"></stop>
+            <stop stop-color="#005EF9" offset="29%"></stop>
+            <stop stop-color="#004BF9" offset="58%"></stop>
+            <stop stop-color="#002DF9" offset="93%"></stop>
+            <stop stop-color="#0025F9" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="15.8353511%" cy="85.496368%" fx="15.8353511%" fy="85.496368%" r="111.815981%" id="radialGradient-2">
+            <stop stop-color="#FFCF15" offset="0%"></stop>
+            <stop stop-color="#F66B0B" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="2知识库管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切片" transform="translate(-1273.000000, -1727.000000)">
+            <g id="ico/大模型/雅意" transform="translate(1273.000000, 1727.000000)">
+                <rect id="矩形" x="0" y="0" width="112" height="112"></rect>
+                <g id="logo/最新" transform="translate(8.000000, 14.000000)" fill-rule="nonzero">
+                    <polygon id="路径" fill="#3C4560" points="49.7036773 12.0226748 32.1956444 40.7516271 25.255266 12 0 12 10.6461978 54.530338 4.82684755 84 29.5751517 84 34.8446983 53.3134579 60 12.0226748"></polygon>
+                    <path d="M77.6354973,36.9373938 C72.6894018,36.9399377 68.0562437,34.3478873 65.2352591,30 L54,84 L78.771888,84 L90,30.0458924 C87.1750812,34.3632713 82.5604592,36.9352853 77.6354973,36.9373938 Z" id="路径" fill="url(#linearGradient-1)"></path>
+                    <circle id="椭圆形" fill="url(#radialGradient-2)" cx="81" cy="15" r="15"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

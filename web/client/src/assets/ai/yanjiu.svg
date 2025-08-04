@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="搜索" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="智能搜索pc-结果页-生成中" transform="translate(-490.000000, -196.000000)" fill="#2A70F5" fill-rule="nonzero">
+            <g id="编组-14" transform="translate(466.000000, 180.000000)">
+                <g id="ico/研究" transform="translate(24.000000, 16.000000)">
+                    <polygon id="形状" opacity="0.5" points="17.666716 1 18.985516 3.47283 21.458316 4.79167 18.985516 6.11051 17.666716 8.58334 16.347816 6.11051 13.875016 4.79167 16.347816 3.47283"></polygon>
+                    <polygon id="路径" points="20.333316 16.12505 18.666716 13.00005 17.000016 16.12505 13.875016 17.79165 17.000016 19.45835 18.666716 22.58335 20.333316 19.45835 23.458316 17.79165"></polygon>
+                    <polygon id="路径" points="8.666666 4.125 11.333316 9.125 16.333316 11.79165 11.333316 14.45835 8.666666 19.45835 5.999996 14.45835 1 11.79165 5.999996 9.125"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

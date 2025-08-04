@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切片" transform="translate(-28.000000, -32.000000)" fill="#A6A6A6" fill-rule="nonzero">
+            <g id="文件/line/contacts-book-2-line" transform="translate(28.000000, 32.000000)">
+                <path d="M20,22 L6,22 C4.34315,22 3,20.6569 3,19 L3,5 C3,3.34315 4.34315,2 6,2 L20,2 C20.5523,2 21,2.44772 21,3 L21,21 C21,21.5523 20.5523,22 20,22 Z M19,20 L19,18 L6,18 C5.44772,18 5,18.4477 5,19 C5,19.5523 5.44772,20 6,20 L19,20 Z M5,16.1707 C5.31278,16.0602 5.64936,16 6,16 L19,16 L19,4 L6,4 C5.44772,4 5,4.44772 5,5 L5,16.1707 Z M12,10 C10.8954,10 10,9.10457 10,8 C10,6.89543 10.8954,6 12,6 C13.1046,6 14,6.89543 14,8 C14,9.10457 13.1046,10 12,10 Z M9,14 C9,12.3431 10.3431,11 12,11 C13.6569,11 15,12.3431 15,14 L9,14 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

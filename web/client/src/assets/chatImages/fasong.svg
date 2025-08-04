@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图" transform="translate(-43.000000, -386.000000)" fill="#C6C6D2" fill-rule="nonzero">
+            <g id="ico/发送" transform="translate(43.000000, 386.000000)">
+                <path d="M1.4595,6.98625 C1.068,6.85575 1.06425,6.645 1.467,6.51075 L15.78225,1.73925 C16.179,1.60725 16.40625,1.82925 16.29525,2.21775 L12.20475,16.53225 C12.09225,16.929 11.8635,16.9425 11.6955,16.566 L9,10.5 L13.5,4.5 L7.5,9 L1.4595,6.98625 Z" id="路径"></path>
+            </g>
+        </g>
+    </g>
+</svg>

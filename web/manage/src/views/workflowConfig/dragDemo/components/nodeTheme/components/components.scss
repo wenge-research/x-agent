@@ -1,0 +1,151 @@
+// 公共样式
+.w-full {
+    width: 100%;
+}
+.h-full {
+    height: 100%;
+}
+.flex {
+    display: flex;
+}
+.items-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+// head-tool组件样式
+.head-tool {
+    margin-bottom: 12px;
+    width: 100%;
+    .icon {
+      width: 22px;
+      height: 22px;
+    }
+    .label {
+        display: inline-block;
+        flex-shrink: 0;
+        flex: 1;
+        margin-left: 8px;
+        color: #383d47;
+        font-size: 14px;
+        font-weight: bold;
+        width: calc(100% - 80px);
+        height: 22px;
+        line-height: 22px;
+        span{
+          display: inline-block;
+          width: calc(100%);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+    }
+    .icon-draw{
+      cursor: pointer;
+      position: relative;
+      right: 4px;
+      &.right{
+        transform: rotate(270deg);
+      }
+    }
+    .icon-more,
+    .icon-outer {
+        margin-left: auto;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(90deg);
+        cursor: pointer;
+        border-radius: 4px;
+        i {
+            color: #828894;
+        }
+        &:hover {
+            background: rgba(180, 188, 204, 0.2);
+        }
+    }
+
+    .icon-outer {
+        transform: rotate(0);
+        margin-right: 4px;
+    }
+
+    ::v-deep(.el-input__inner) {
+        height: 24px;
+        line-height: 24px;
+        border-radius: 4px;
+      }
+}
+.el-popper {
+    margin-top: 4px;
+    :deep(.popper__arrow) {
+        display: none;
+    }
+}
+.el-dropdown-menu {
+    background: #ffffff;
+    box-shadow: 0px 2px 6px 0px rgba(26, 36, 70, 0.1);
+    border-radius: 12px;
+    padding: 4px;
+}
+.el-dropdown-menu__item {
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 14px;
+    color: #383d47;
+    line-height: 32px;
+    &:hover {
+        background: rgba(180, 188, 204, 0.2);
+        border-radius: 4px;
+        line-height: 32px;
+        color: #383d47;
+    }
+}
+// running-state组件样式
+.running-state {
+    width: 100%;
+    height: 27px;
+    background: #d1e0fe;
+    border-radius: 7px 7px 0px 0px;
+    padding: 0 16px;
+    .status {
+        margin-left: 4px;
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #383d47;
+    }
+    .open {
+        margin-left: auto;
+        cursor: pointer;
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #1c50fd;
+        line-height: 20px;
+    }
+    @keyframes rotateIcon {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    .start-icon {
+        display: inline-block;
+        animation: rotateIcon 2s linear infinite;
+    }
+}
+.running-start {
+    background: #d1e0fe;
+}
+.running-end {
+    background: #e1f8d6;
+}
+.iconfont {
+  font-size: 16px;
+}

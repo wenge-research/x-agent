@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="112px" height="112px" viewBox="0 0 112 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img/发布成功</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M49,65 C47.3431458,65 46,63.6568542 46,62 C46,60.3431458 47.3431458,59 49,59 L60,59 L60,40 C60,38.3431458 61.3431458,37 63,37 C64.6568542,37 66,38.3431458 66,40 L66,62 C66,63.5976809 64.75108,64.9036609 63.1762728,64.9949073 L63,65 L49,65 Z" id="path-2"></path>
+        <filter x="-5.0%" y="-3.6%" width="120.0%" height="114.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="2" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="应用管理-切片" transform="translate(-51.000000, -190.000000)">
+            <g id="img/发布成功" transform="translate(51.000000, 190.000000)">
+                <rect id="矩形" x="0" y="0" width="112" height="112"></rect>
+                <circle id="椭圆形" fill="#69DE33" opacity="0.100000001" cx="56" cy="56" r="35"></circle>
+                <circle id="椭圆形" fill="#4BBE25" cx="56" cy="56" r="28"></circle>
+                <circle id="椭圆形" fill="url(#linearGradient-1)" cx="56" cy="56" r="28"></circle>
+                <g id="形状结合" transform="translate(56.000000, 51.000000) rotate(45.000000) translate(-56.000000, -51.000000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+                <path d="M32,2 C32,4.209139 33.790861,6 36,6 C33.790861,6 32,7.790861 32,10 C32,7.790861 30.209139,6 28,6 C30.209139,6 32,4.209139 32,2 Z" id="矩形" fill="#1C50FD"></path>
+                <path d="M106,45 C106,47.209139 107.790861,49 110,49 C107.790861,49 106,50.790861 106,53 C106,50.790861 104.209139,49 102,49 C104.209139,49 106,47.209139 106,45 Z" id="矩形备份-4" fill="#8E65FF" opacity="0.800000012"></path>
+                <path d="M16,83 C16,86.3137085 18.6862915,89 22,89 C18.6862915,89 16,91.6862915 16,95 C16,91.6862915 13.3137085,89 10,89 C13.3137085,89 16,86.3137085 16,83 Z" id="矩形备份-2" fill="#D1E0FE"></path>
+                <path d="M100,33 C100,36.3137085 102.686292,39 106,39 C102.686292,39 100,41.6862915 100,45 C100,41.6862915 97.3137085,39 94,39 C97.3137085,39 100,36.3137085 100,33 Z" id="矩形备份-3" fill="#FFE9B8"></path>
+            </g>
+        </g>
+    </g>
+</svg>

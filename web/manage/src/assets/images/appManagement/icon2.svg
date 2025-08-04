@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/功能/推荐问题</title>
+    <g id="ico/功能/推荐问题" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" fill="#4AB25B" x="0" y="0" width="32" height="32" rx="2"></rect>
+        <g id="交流/fill/chat-smile-3-fill" transform="translate(8.500000, 8.687500)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M3.3409125,12 L0,14.625 L0,0.75 C0,0.33579 0.33579,0 0.75,0 L14.25,0 C14.664225,0 15,0.33579 15,0.75 L15,11.25 C15,11.664225 14.664225,12 14.25,12 L3.3409125,12 Z M7.51335,8.774775 L10.032375,6.25575 C10.6914,5.596725 10.6914,4.5282675 10.032375,3.8692575 C9.37335,3.2102475 8.3049,3.2102475 7.645875,3.8692575 L7.51335,4.0018425 L7.38075,3.8692575 C6.721725,3.2102475 5.6532675,3.2102475 4.9942575,3.8692575 C4.3352475,4.5282675 4.3352475,5.596725 4.9942575,6.25575 L7.51335,8.774775 Z" id="形状"></path>
+        </g>
+    </g>
+</svg>

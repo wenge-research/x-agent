@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="移动" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="移动端首页" transform="translate(-862.000000, -758.000000)" fill="#169E9A" fill-rule="nonzero">
+            <g id="操作系统/line/function-add-line" transform="translate(862.000000, 758.000000)">
+                <path d="M4,3 C3.44772,3 3,3.44772 3,4 L3,10 C3,10.5523 3.44772,11 4,11 L10,11 C10.5523,11 11,10.5523 11,10 L11,4 C11,3.44772 10.5523,3 10,3 L4,3 Z M4,13 C3.44772,13 3,13.4477 3,14 L3,20 C3,20.5523 3.44772,21 4,21 L10,21 C10.5523,21 11,20.5523 11,20 L11,14 C11,13.4477 10.5523,13 10,13 L4,13 Z M14,13 C13.4477,13 13,13.4477 13,14 L13,20 C13,20.5523 13.4477,21 14,21 L20,21 C20.5523,21 21,20.5523 21,20 L21,14 C21,13.4477 20.5523,13 20,13 L14,13 Z M15,19 L15,15 L19,15 L19,19 L15,19 Z M5,9 L5,5 L9,5 L9,9 L5,9 Z M5,19 L5,15 L9,15 L9,19 L5,19 Z M16,11 L16,8 L13,8 L13,6 L16,6 L16,3 L18,3 L18,6 L21,6 L21,8 L18,8 L18,11 L16,11 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

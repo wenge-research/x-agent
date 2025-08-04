@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="64px" viewBox="0 0 128 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>推荐事项</title>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="DOUYINSANSBOLD-GB, Douyin Sans" font-size="32" font-weight="bold" line-spacing="64">
+        <g id="切片" transform="translate(-37.000000, -27.000000)">
+            <text id="推荐事项">
+                <tspan x="37" y="56" fill="#355EFF">推荐</tspan>
+                <tspan x="101" y="56" fill="#181B49">事项</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

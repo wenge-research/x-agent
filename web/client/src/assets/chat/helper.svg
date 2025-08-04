@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/雅意助手</title>
+    <defs>
+        <linearGradient x1="23.8542115%" y1="0%" x2="76.7912578%" y2="91.8446114%" id="linearGradient-1">
+            <stop stop-color="#79FFE8" offset="0%"></stop>
+            <stop stop-color="#35D6FF" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="85.8293341%" cy="100%" fx="85.8293341%" fy="100%" r="138.186358%" gradientTransform="translate(0.858293,1.000000),scale(1.000000,0.760000),rotate(-136.202208),scale(1.000000,0.779680),translate(-0.858293,-1.000000)" id="radialGradient-2">
+            <stop stop-color="#93FCFF" offset="0%"></stop>
+            <stop stop-color="#2CB6B1" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="6.72487907%" cy="6.52060182%" fx="6.72487907%" fy="6.52060182%" r="131.578947%" gradientTransform="translate(0.067249,0.065206),scale(1.000000,0.760000),rotate(90.000000),translate(-0.067249,-0.065206)" id="radialGradient-3">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#52D2FF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-4" x="9" y="0" width="19" height="25" rx="3"></rect>
+        <filter x="-13.2%" y="-10.0%" width="126.3%" height="120.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="2" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.897022092   0 0 0 0 0.892640053   0 0 0 0 1  0 0 0 0.480127295 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="4.73064235%" y1="0%" x2="116.789283%" y2="90.1941459%" id="linearGradient-6">
+            <stop stop-color="#8FFEFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#8FFEFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="雅意PC端" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="雅意大模型-雅意助手默认" transform="translate(-1554.000000, -364.000000)">
+            <g id="ico/雅意助手" transform="translate(1554.000000, 364.000000)">
+                <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                <g id="编组" transform="translate(2.000000, 4.000000)">
+                    <g id="矩形">
+                        <use fill-opacity="0.8" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <use fill="url(#radialGradient-2)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <use fill="url(#radialGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    </g>
+                    <rect id="矩形" fill="#FFFFFF" x="17.7142857" y="6" width="7" height="2" rx="1"></rect>
+                    <rect id="矩形备份-3" fill="#FFFFFF" x="16.7142857" y="11" width="8" height="2" rx="1"></rect>
+                    <rect id="矩形备份-5" fill="#FFFFFF" x="16.7142857" y="16" width="8" height="2" rx="1"></rect>
+                    <path d="M14.5740741,6 C15.3615912,6 16,6.63840878 16,7.42592593 L16,17.0185185 C16,17.8060357 15.3615912,18.4444444 14.5740741,18.4444444 L8.296,18.444 L3.55555556,22 L3.555,18.444 L1.42592593,18.4444444 C0.638408783,18.4444444 -1.2560157e-16,17.8060357 0,17.0185185 L0,7.42592593 C-9.64430349e-17,6.63840878 0.638408783,6 1.42592593,6 L14.5740741,6 Z" id="形状结合" fill="url(#linearGradient-6)" transform="translate(8.000000, 14.000000) scale(-1, 1) translate(-8.000000, -14.000000) "></path>
+                    <rect id="矩形" fill="#FFFFFF" x="4" y="10" width="2" height="4" rx="1"></rect>
+                    <rect id="矩形备份-2" fill="#FFFFFF" x="10" y="10" width="2" height="4" rx="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

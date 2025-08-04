@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="4系统管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="用户管理-图标" transform="translate(-106.000000, -28.000000)">
+            <g id="文件夹-收起" transform="translate(106.000000, 28.000000)">
+                <g id="folder-2-line" transform="translate(3.500000, 5.250000)"></g>
+                <path d="M37.5,36.75 L4.5,36.75 C3.94771525,36.75 3.5,36.3022847 3.5,35.75 L3.5,7 L3.5,7 C3.5,6.03351 4.28351,5.25 5.25,5.25 L18.22485,5.25 L21.72485,8.75 L36.75,8.75 C37.716525,8.75 38.5,9.53351 38.5,10.5 L38.5,35.75 C38.5,36.3022847 38.0522847,36.75 37.5,36.75 Z" id="路径" fill="#E8A638" fill-rule="nonzero"></path>
+                <path d="M38.5,11.5 L38.5,34.34375 L38.5,34.34375 C38.5,35.6727219 37.716525,36.75 36.75,36.75 L5.25,36.75 C4.28351,36.75 3.5,35.6727219 3.5,34.34375 L3.5,11.5 C3.5,10.9477153 3.94771525,10.5 4.5,10.5 L37.5,10.5 C38.0522847,10.5 38.5,10.9477153 38.5,11.5 Z" id="路径" fill="#FFC244" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

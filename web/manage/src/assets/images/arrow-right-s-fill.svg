@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2应用管理-创建应用" transform="translate(-640.000000, -176.000000)" fill="#768094" fill-rule="nonzero">
+            <g id="编组-8" transform="translate(640.000000, 166.000000)">
+                <g id="箭头/fill/arrow-right-s-fill" transform="translate(0.000000, 10.000000)">
+                    <polygon id="路径" points="10 12.5 5 7.5 15 7.5"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

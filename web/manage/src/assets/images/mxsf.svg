@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img/插件/类型模型算法</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#537FFD" stop-opacity="0.501238416" offset="0%"></stop>
+            <stop stop-color="#537FFD" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="4工具管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="插件管理-切片" transform="translate(-544.000000, -68.000000)">
+            <g id="img/插件/类型模型算法" transform="translate(554.000000, 74.000000)">
+                <path d="M40,50 L7.33333333,50 C2.17866667,50 0,45.8763158 0,40.7894737 L0,7.89473684 C0,3.53460526 3.58173333,0 8,0 L40,0 C42.209139,0 44,1.790861 44,4 L44,38 L10,38 C7.85780461,38 6.10892112,39.6839685 6.00489531,41.8003597 L6,42 C6,44.209139 7.790861,46 10,46 L44,46 C44,48.209139 42.209139,50 40,50 Z" id="形状结合" fill="#537FFD" fill-rule="nonzero"></path>
+                <path d="M40,50 C42.209139,50 44,51.790861 44,54 L44,58 L0.0798541969,58.0002562 C0.680344727,53.4853762 4.5943769,50 9.33333333,50 Z" id="形状结合" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <path d="M44,38 L44.0007886,38.0193365 C43.1755993,39.1315101 42.6874747,40.5087512 42.6874747,42 C42.6874747,43.4912488 43.1755993,44.8684899 44.0007886,45.9806635 L44,46 L10,46 C7.790861,46 6,44.209139 6,42 C6,39.790861 7.790861,38 10,38 L44,38 Z" id="形状结合" fill="#D1E0FE" fill-rule="nonzero"></path>
+                <path d="M8,8 L8,14 L14,14 L14,8 L8,8 Z M8,18 L8,24 L14,24 L14,18 L8,18 Z" id="形状结合" fill="#FFFFFF" fill-rule="nonzero"></path>
+                <path d="M11.8578644,38 L26,23.8578644 L40.1421356,38 L32,38 L32,52 L20,52 L20,38 L11.8578644,38 Z" id="形状结合" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,43 @@
+/* 文本不换行
+------------------------------- */
+@mixin text-no-wrap() {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* 多行文本溢出
+  ------------------------------- */
+@mixin text-ellipsis($line: 2) {
+	overflow: hidden;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+}
+
+$font-size-base14: 14px; //正确
+$font-size-base16: 16px; //正确
+$font-size-base18: 18px; //正确
+$font-size-base20: 20px; //正确
+$font-size-base32: 32px; //正确
+
+$size: 0px;
+$size-2: 2px;
+$size-4: 4px;
+
+/* 多行文本溢出
+  ------------------------------- */
+@mixin add-size($val, $size) {
+	font-size: $val + $size !important;
+	[data-size='0'] & {
+		font-size: $val + $size !important; //小号，增量0
+	}
+	[data-size='1'] & {
+		font-size: $val + $size-2 !important; //中号，增量2
+	}
+	[data-size='2'] & {
+		font-size: $val + $size-4 !important; //大号，增量4
+	}
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="152px" viewBox="0 0 320 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>组件/指令卡片</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.2" offset="100%"></stop>
+        </linearGradient>
+        <path d="M284,0 L316,32 L292,32 C287.581722,32 284,28.418278 284,24 L284,0 L284,0 Z" id="path-2"></path>
+        <filter x="-56.2%" y="-31.2%" width="187.5%" height="187.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="-4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0759324981   0 0 0 0 0.359541557   0 0 0 0 1  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="雅意PC端" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图整理" transform="translate(-630.000000, -692.000000)">
+            <g id="卡片背景" transform="translate(630.000000, 696.000000)">
+                <path d="M283.894116,0.5 L315.5,31.6064497 L315.5,140 C315.5,142.071068 314.660534,143.946068 313.303301,145.303301 C311.946068,146.660534 310.071068,147.5 308,147.5 L308,147.5 L8,147.5 C5.92893219,147.5 4.05393219,146.660534 2.69669914,145.303301 C1.33946609,143.946068 0.5,142.071068 0.5,140 L0.5,140 L0.5,8 C0.5,5.92893219 1.33946609,4.05393219 2.69669914,2.69669914 C4.05393219,1.33946609 5.92893219,0.5 8,0.5 L8,0.5 L283.894116,0.5 Z" id="矩形" stroke="#FFFFFF" fill="url(#linearGradient-1)"></path>
+                <g id="矩形">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

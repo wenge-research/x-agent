@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img/知识库文档类型/txt</title>
+    <g id="img/知识库文档类型/txt" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形" x="0" y="0" width="28" height="28" rx="4"></rect>
+        <path d="M18,4 L18,7.9998471 C18,8.55213185 18.4477153,8.9998471 19,8.9998471 L22.999,8.999 L23,23.0082 C23,23.556 22.5551,24 22.0066,24 L5.9934,24 C5.44476,24 5,23.5447 5,23.0082 L5,4.9918 C5,4.44405 5.44495,4 5.9934,4 L18,4 Z M18,17 L10,17 L10,19 L18,19 L18,17 Z M18,13 L10,13 L10,15 L18,15 L18,13 Z M13,9 L10,9 L10,11 L13,11 L13,9 Z" id="形状结合" fill="#7E56EB" fill-rule="nonzero"></path>
+        <path d="M18,4 L23,8.9998471 L19,8.9998471 C18.4477153,8.9998471 18,8.55213185 18,7.9998471 L18,4 L18,4 Z" id="矩形" fill="#CBBBF7"></path>
+    </g>
+</svg>

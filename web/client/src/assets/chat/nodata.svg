@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="150px" viewBox="0 0 200 150" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img/缺省/暂无数据</title>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="-2.471453e-14%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#D9E9FF" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-6.5%" y="-57.8%" width="113.0%" height="215.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="0.33451447%" y1="50.00606%" x2="99.56021%" y2="50.00606%" id="linearGradient-3">
+            <stop stop-color="#B3D0FD" offset="0%"></stop>
+            <stop stop-color="#CCDDFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0.33451447%" y1="50.00606%" x2="98.6098437%" y2="50.00606%" id="linearGradient-4">
+            <stop stop-color="#E2ECFF" offset="0%"></stop>
+            <stop stop-color="#C8DDFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="16.803841%" y1="53.871316%" x2="83.19616%" y2="68.74645%" id="linearGradient-5">
+            <stop stop-color="#C0DEFF" offset="0%"></stop>
+            <stop stop-color="#9EBCFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="74.17153%" y1="44.02348%" x2="25.828472%" y2="59.61987%" id="linearGradient-6">
+            <stop stop-color="#DDE9FF" offset="0%"></stop>
+            <stop stop-color="#C4D6FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="-14.890306%" y2="50%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F9FCFF" offset="6%"></stop>
+            <stop stop-color="#DAEAFF" offset="67.480433%"></stop>
+            <stop stop-color="#C7DFFF" offset="84.96967%"></stop>
+            <stop stop-color="#C0DBFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-1416.744%" y1="-4054.706%" x2="-1316.744%" y2="-4054.706%" id="linearGradient-8">
+            <stop stop-color="#CBE2FC" offset="0%"></stop>
+            <stop stop-color="#FCFDFF" offset="4%"></stop>
+            <stop stop-color="#E9F3FF" offset="35%"></stop>
+            <stop stop-color="#DEECFF" offset="66%"></stop>
+            <stop stop-color="#DAEAFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="雅意V0.3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="雅意大模型-缺省其他状态" transform="translate(-366.000000, -117.000000)">
+            <g id="img/缺省/暂无数据" transform="translate(366.000000, 117.000000)">
+                <polygon id="矩形" points="0 0 200 0 200 150 0 150"></polygon>
+                <g id="编组" transform="translate(32.000000, 11.000000)">
+                    <path d="M0,129.232031 L0,26.5382813 L29.4234375,26.5382813 L29.4234375,0 L76.153125,0 L76.153125,39.2320313 L102.114844,39.2320313 L102.114844,129.232031 L0,129.232031 Z M113.653125,26.5382812 L136.153125,26.5382812 L136.153125,129.232031 L113.653125,129.232031 L113.653125,26.5382812 Z" id="形状结合备份-13" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                    <polygon id="椭圆形备份-9" fill="#C2D5FF" opacity="0.200000003" filter="url(#filter-2)" points="114.229688 121.232031 114.152344 121.527344 113.908594 121.846094 113.421094 122.204687 112.582031 122.6125 111.471094 123.003906 109.95 123.41875 107.929688 123.852344 104.753906 124.384375 100.713281 124.902344 96.3960938 125.33125 91.3710938 125.715625 86.1328125 126.010937 80.3460938 126.238281 74.4046875 126.374219 68.0765625 126.423437 61.7484375 126.374219 55.8070313 126.238281 50.0203125 126.010937 44.7820313 125.715625 39.7570313 125.33125 35.4398438 124.902344 31.3992188 124.384375 28.2234375 123.852344 26.203125 123.41875 24.6820313 123.003906 23.5710938 122.6125 22.7320313 122.204687 22.2445313 121.846094 22.0007813 121.527344 21.9234375 121.232031 22.0007813 120.934375 22.2445313 120.615625 22.7320313 120.257031 23.5710938 119.851562 24.6820313 119.460156 26.203125 119.042969 28.2234375 118.609375 31.3992188 118.079687 35.4398438 117.559375 39.7570313 117.130469 44.7820313 116.748437 50.0203125 116.450781 55.8070313 116.223437 61.7484375 116.0875 68.0765625 116.038281 74.4046875 116.0875 80.3460938 116.223437 86.1328125 116.450781 91.3710938 116.748437 96.3960938 117.130469 100.713281 117.559375 104.753906 118.079687 107.929688 118.609375 109.95 119.042969 111.471094 119.460156 112.582031 119.851562 113.421094 120.257031 113.908594 120.615625 114.152344 120.934375"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-3)" fill-rule="nonzero" points="103.853906 112 66.9234375 107.0875 66.9234375 66.4234375 103.853906 71.0382812"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-4)" fill-rule="nonzero" points="32.8851562 112 66.9234375 107.033594 66.9234375 66.4234375 32.8851562 71.6148437"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-5)" points="70.9617187 118.346875 32.8851562 112.353906 32.8851562 71.6148437 70.9617187 77.603125"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-6)" points="70.9617187 118.346875 103.853906 112 103.853906 71.0382812 70.9617187 77.3640625"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-7)" fill-rule="nonzero" points="60.5273438 87.19375 21.9234375 81.3132812 32.3554688 71.6148437 70.9617188 77.490625"></polygon>
+                    <polygon id="路径" fill="url(#linearGradient-8)" fill-rule="nonzero" points="80.7609375 86.6148437 114.229687 80.5585937 103.853906 71.0382812 70.9617187 77.3640625"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

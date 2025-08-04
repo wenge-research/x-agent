@@ -1,0 +1,127 @@
+@import 'mixins/index.scss';
+
+body {
+	--w-color-primary: rgb(var(--primary-6));
+	--next-color-user-hover: rgba(0, 0, 0, 0.04);
+	@for $i from 12 through 30 {
+		--font#{$i}: #{$i}px;
+	}
+}
+/* NavMenu 导航菜单
+------------------------------- */
+// 鼠标 hover 时颜色
+// .w-menu-hover-bg-color {
+// 	background-color: var(--next-bg-menuBarActiveColor) !important;
+// }
+// .w-menu-light .w-menu-item.w-menu-selected{
+// 	 background-color: var(--next-bg-menuBarActiveColor);
+// }
+// // 默认样式修改
+// .w-menu {
+// 	border-right: none !important;
+// 	width: 220px;
+// 	background-color: transparent !important;
+// 	box-shadow: none;
+// }
+
+// .w-menu-collapsed .w-menu-icon{
+// 	width: 58px;
+// 	display: flex;
+// 	justify-content: center;
+// }
+// // 修复点击左侧菜单折叠再展开时，宽度不跟随问题
+// .w-menu-collapsed {
+// 	width: 88px !important;
+// }
+
+// // 水平菜单、横向菜单高亮 背景色，鼠标 hover 时，有子级菜单的背景色
+// .w-menu-item.w-menu-selected,
+// .w-sub-menu.w-menu-selected .w-sub-menu__title,
+// .w-sub-menu:not(.is-opened):hover .w-sub-menu__title {
+// 	@extend .w-menu-hover-bg-color;
+// }
+
+// .w-menu-item:hover,.w-menu-inline-header:hover,.w-menu-pop-header:hover {
+// 	@extend .w-menu-hover-bg-color;
+// }
+// .w-menu-selected-label{
+// 	bottom: -3px;
+// }
+// 横向菜单（经典、横向）布局
+.w-menu-horizontal-warp {
+	flex: 1;
+	overflow: hidden;
+	// .w-menu-horizontal {
+	// 	--color-text-2: var(--next-bg-topBarColor);
+	// 	--color-text-3: var(--next-bg-topBarColor);
+	// 	width: 100%;
+	// 	.w-menu-item,
+	// 	.w-menu-pop-header,
+	// 	.w-sub-menu__title {
+	// 		line-height: 64px;
+	// 	}
+	// }
+}
+
+// // 纵向菜单布局
+// .w-menu-vertical {
+
+// 	--color-text-2: var(--next-bg-menuBarColor);
+// 	--color-text-3: var(--next-bg-menuBarColor);
+
+// 	.w-menu-item,
+// 	.w-menu-inline-header,
+// 	.w-menu-pop-header,
+// 	.w-sub-menu {
+// 		line-height: 64px;
+// 		margin-bottom: 4px;
+// 		.w-sub-menu__title {
+// 			line-height: 64px;
+// 		}
+// 	}
+// }
+// .w-menu-light{
+// 	--color-menu-light-bg: transparent;
+// }
+
+.w-divider-text {
+	color: var(--color-text-1);
+	background: var(--color-white);
+}
+
+.w-menu-vertical .w-menu-inline-header.w-menu-has-icon {
+	font-size: 16px;
+}
+.w-menu-light .w-menu-inline-header.w-menu-selected {
+	font-size: 16px;
+	color: #181b49;
+	font-weight: bold;
+}
+.w-menu-light .w-menu-inline-header.w-menu-selected .w-icon,
+.w-menu-light .w-menu-inline-header.w-menu-selected .w-menu-icon {
+	color: #9a99aa;
+}
+.subMenutTitle {
+	font-size: 14px;
+}
+.subMenutIcon{
+	display: flex;
+}
+// .subMenutTitle::before {
+// 	content: '';
+// 	width: 4px;
+// 	height: 4px;
+// 	display: inline-block;
+// 	border-radius: 50%;
+// 	background: #355EFF;
+// 	position: absolute;
+// }
+.w-select-dropdown {
+	box-shadow: 0px 4px 10px 0px rgba(30, 64, 175, 0.06);
+	border-radius: 8px;
+	padding: 6px;
+	.w-select-option-active {
+		background: rgba(53, 94, 255, 0.06);
+		border-radius: 4px;
+	}
+}

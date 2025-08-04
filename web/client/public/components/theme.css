@@ -1,0 +1,89 @@
+:root {
+  /* https://github.com/vueComponent/ant-design-vue/blob/main/components/style/themes/default.less */
+  /*color*/
+  --primary-color: royalblue;
+  --primary-color-opacity-100: color-mix(in srgb, var(--primary-color) 10%, transparent);
+  --primary-color-opacity-200: color-mix(in srgb, var(--primary-color) 20%, transparent);
+  --primary-color-opacity-600: color-mix(in srgb, var(--primary-color) 60%, transparent);
+  --primary-bg: #fff;
+  --shadow: 2px 2px 15px rgba(0,0,0,0.15);
+  --primary-bg-secondary: #f0f0f0;
+  --primary-bg-dark: rgba(0, 0, 0, .25);
+  --primary-color-light: color-mix(in srgb, var(--primary-color) 90%, #fff);
+  --primary-color-lighter: color-mix(in srgb, var(--primary-color) 80%, #fff);
+  --primary-color-dark: color-mix(in srgb, var(--primary-color) 90%, #000);
+  --primary-color-darker: color-mix(in srgb, var(--primary-color) 80%, #000);
+  /*边框颜色，按钮、输入框*/
+  --border-color: #d9d9d9;
+  /*成功色*/
+  --success-color: #52c41a;
+  /*警告色*/
+  --waring-color: #faad14;
+  /*错误色*/
+  --error-color: #f4615c;
+  /*提示色*/
+  --info-color: #1890ff;
+  /*危险色*/
+  --danger-color: #ff7875;
+  /*font*/
+  --font-size: 14px;
+  --font-size-lg: 16px;
+  --font-size-sm: 12px;
+  /* text */
+  --text-color: rgba(0, 0, 0, .88);
+  /*文字颜色*/
+  --text-color-secondary: rgba(0, 0, 0, .45);
+  /*radius*/
+  --border-radius-base: 4px;
+  --border-radius-lg: 6px;
+  --border-radius-sm: 2px;
+  /*height*/
+  --height-base: 32px;
+  --height-lg: 40px;
+  --height-sm: 24px;
+  /* progress */
+  --progress-bg: rgba(0, 0, 0, .06);
+  /*disabled*/
+  --disabled-color: rgba(0, 0, 0, .25);
+  --disabled-bg: rgba(0, 0, 0, .04);
+  /* transition */
+  --transition: all .2s, outline 0s;
+  /* tips */
+  --tips-bg: rgba(0, 0, 0, .88);
+  --tips-color: #fff;
+}
+
+
+html:has(xy-dialog[open]){
+  overflow: hidden;
+}
+
+xy-select:not(:defined) xy-option,
+xy-popover:not(:defined){
+  position: absolute;
+  visibility: hidden;
+}
+
+xy-select xy-button[slot="button"]::part(button)::after{
+  content: '';
+  width: 1em;
+  height: 1em;
+  margin-right: -.5em;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.--%3E%3Cpath d='M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z'/%3E%3C/svg%3E") center/ 80% no-repeat;
+  background-color: currentColor;
+  opacity: .8;
+}
+xy-select[open] xy-button[slot="button"]::part(button)::after {
+  transform: scaleY(-1);
+}
+xy-select[open] xy-button::part(button){
+  border-color: var(--primary-color);
+}
+
+@supports not (color: color-mix(in srgb, red, pink)) {
+  :root {
+    --primary-color-opacity-100: rgba(65, 105, 225, 0.1);
+    --primary-color-opacity-200: rgba(65, 105, 225, 0.2);
+    --primary-color-opacity-600: rgba(65, 105, 225, 0.6);
+  }
+}

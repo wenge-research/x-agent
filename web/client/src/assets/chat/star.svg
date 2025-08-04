@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/star</title>
+    <defs>
+        <linearGradient x1="47.121682%" y1="18.272554%" x2="73.8979946%" y2="77.2951902%" id="linearGradient-1">
+            <stop stop-color="#FFC146" offset="0%"></stop>
+            <stop stop-color="#FF5412" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="88.2814231%" cy="85.6905153%" fx="88.2814231%" fy="85.6905153%" r="87.9356287%" gradientTransform="translate(0.882814,0.856905),rotate(144.816041),scale(1.000000,0.779680),translate(-0.882814,-0.856905)" id="radialGradient-2">
+            <stop stop-color="#F7AC59" offset="0%"></stop>
+            <stop stop-color="#FFB376" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="39.1653747%" cy="12.6244163%" fx="39.1653747%" fy="12.6244163%" r="100%" id="radialGradient-3">
+            <stop stop-color="#FFC9A6" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#FFBC52" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <path d="M13.5346589,20.2446443 L8.74004913,22.7653198 C8.25120454,23.0223206 7.64657738,22.8343741 7.38957658,22.3455295 C7.28723751,22.150869 7.25192283,21.927901 7.28909967,21.7111433 L8.20478866,16.3722669 C8.26042659,16.0478729 8.15287811,15.7168727 7.91719202,15.4871355 L4.03827126,11.7061222 C3.64278768,11.320621 3.63469537,10.6875078 4.02019658,10.2920242 C4.17370519,10.1345405 4.3748476,10.0320534 4.59248463,10.0004289 L9.95302129,9.22149728 C10.2787315,9.17416883 10.560297,8.96959945 10.705959,8.67445598 L13.1032639,3.81698575 C13.3476862,3.32173209 13.9473121,3.11839309 14.4425657,3.36281539 C14.6397783,3.46014562 14.7994058,3.61977315 14.8967361,3.81698575 L17.294041,8.67445598 C17.439703,8.96959945 17.7212685,9.17416883 18.0469787,9.22149728 L23.4075154,10.0004289 C23.9540602,10.0798465 24.3327417,10.5872893 24.2533241,11.1338342 C24.2216996,11.3514712 24.1192124,11.5526136 23.9617287,11.7061222 L20.082808,15.4871355 C19.8471219,15.7168727 19.7395734,16.0478729 19.7952113,16.3722669 L20.7109003,21.7111433 C20.8042613,22.2554798 20.4386735,22.7724357 19.8943371,22.8657967 C19.6775794,22.9029736 19.4546114,22.8676589 19.2599509,22.7653198 L14.4653411,20.2446443 C14.1740171,20.0914862 13.8259829,20.0914862 13.5346589,20.2446443 Z" id="path-4"></path>
+        <filter x="-3.2%" y="-5.2%" width="106.4%" height="102.6%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="2" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.953744867   0 0 0 0 0.892640053  0 0 0 0.480127295 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="雅意0426-浅色" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图整理" transform="translate(-352.000000, -319.000000)">
+            <g id="ico/star" transform="translate(352.000000, 319.000000)">
+                <rect id="矩形" x="0" y="0" width="28" height="28"></rect>
+                <g id="星形">
+                    <use fill-opacity="0.9" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <use fill="url(#radialGradient-2)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <use fill="url(#radialGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                </g>
+                <g id="编组-2" transform="translate(21.076215, 4.411813) scale(-1, 1) translate(-21.076215, -4.411813) translate(16.596164, 0.657950)"></g>
+            </g>
+        </g>
+    </g>
+</svg>

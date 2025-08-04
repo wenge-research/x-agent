@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "MiSans-Regular";
+  src: url(MiSans-Normal.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MiSans-Medium";
+  src: url(MiSans-Medium.ttf);
+  font-weight: bold;
+  font-style: normal;
+}

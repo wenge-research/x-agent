@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="702px" height="80px" viewBox="0 0 702 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>title</title>
+    <defs>
+        <linearGradient x1="9.46843805%" y1="0%" x2="9.46843805%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFC25B" stop-opacity="0.3" offset="0%"></stop>
+            <stop stop-color="#F7974E" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="49.9980469%" id="linearGradient-2">
+            <stop stop-color="#FFC25A" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFC25A" offset="51.4988186%"></stop>
+            <stop stop-color="#FFC25A" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="新新" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切片" transform="translate(-57.000000, -329.000000)">
+            <g id="title" transform="translate(57.000000, 329.000000)">
+                <path d="M24,0 L678,0 C691.254834,-2.4348735e-15 702,10.745166 702,24 L702,80 L702,80 L0,80 L0,24 C1.92946468e-15,10.745166 10.745166,1.623249e-15 24,0 Z" id="矩形" fill="url(#linearGradient-1)"></path>
+                <path d="M83.7809524,0 L619.780952,0 L539.421123,71.8545568 C533.55466,77.1001144 525.960971,80 518.091329,80 L185.470575,80 C177.600934,80 170.007244,77.1001144 164.140781,71.8545568 L83.7809524,0 L83.7809524,0 Z" id="矩形" fill="#FFC25A" opacity="0.100000001"></path>
+                <path d="M153.780952,0 L549.780952,0 L493.279279,68.3826976 C487.200214,75.7400524 478.154444,80 468.610561,80 L234.951344,80 C225.407461,80 216.361691,75.7400524 210.282626,68.3826976 L153.780952,0 L153.780952,0 Z" id="矩形" fill="#FFC25A" opacity="0.200000003"></path>
+                <path d="M208,0 L495.561905,0 L456.883586,64.4638642 C451.100442,74.1024373 440.684224,80 429.443813,80 L274.118092,80 C262.877681,80 252.461462,74.1024373 246.678319,64.4638642 L208,0 L208,0 Z" id="矩形" fill="#FFC25A" opacity="0.400000006"></path>
+                <text id="热门问题" font-family="DOUYINSANSBOLD-GB, Douyin Sans" font-size="36" font-weight="bold" fill="#383D47">
+                    <tspan x="280" y="52">热门问题</tspan>
+                </text>
+                <rect id="矩形" fill="url(#linearGradient-2)" x="32" y="0" width="640" height="4"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

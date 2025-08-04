@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图" transform="translate(-309.000000, -386.000000)">
+            <g id="ico/暂停" transform="translate(309.000000, 386.000000)">
+                <polygon id="路径" points="0 0 18 0 18 18 0 18"></polygon>
+                <path d="M4.5,2.25 L6,2.25 L6,15.75 L4.5,15.75 L4.5,2.25 Z M12,2.25 L13.5,2.25 L13.5,15.75 L12,15.75 L12,2.25 Z" id="形状" fill="#646479" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

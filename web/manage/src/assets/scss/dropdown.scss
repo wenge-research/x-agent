@@ -1,0 +1,68 @@
+//折叠菜单
+.opts-box {
+  width: 24px;
+  height: 24px;
+  // background: rgba(180, 188, 204, .2);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .opts-box-dropdown {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    .popper__arrow {
+        display: none;
+      }
+    .el-dropdown-link {
+      height: 100%;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    
+  }
+}
+.opts-box.opts-box-active {
+  background: rgba(180, 188, 204, 0.2);
+}
+.opts-box:hover {
+  cursor: pointer;
+  background: rgba(180, 188, 204, 0.2);
+}
+.opts-box-dropdown-menu {
+  background: #FFFFFF;
+  box-shadow: 0px 2px 6px 0px rgba(26,36,70,0.1);
+  border-radius: 4px;
+  padding: 4px;
+  .el-dropdown-menu__item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    span {
+      display: table-cell; /* 将子元素设置为表格单元格 */
+      vertical-align: middle; /* 垂直居中对齐 */
+    }
+  }
+  .el-dropdown-menu__item:not(.is-disabled):hover {
+    background-color: rgba(180, 188, 204, .2);
+  }
+  // .popper__arrow {
+  //   display: none !important;
+  // }
+  iconpark-icon{
+    font-size: 16px;
+    vertical-align: middle;
+    display: table-cell;
+    padding-right: 6px;
+    position: relative;
+    top: 2px;
+  }
+}
+.el-popper .popper__arrow {
+  display: none !important;
+}

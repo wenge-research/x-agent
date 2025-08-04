@@ -1,0 +1,389 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+a, a:hover{
+  color: inherit;
+  text-decoration: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  font-family: 'PingFangSC-Light', 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', 'Arial', 'sans-serif';
+}
+
+// iconFont svg图标
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+
+/* flex 弹性布局
+------------------------------- */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+
+
+/* 字体大小全局样式
+------------------------------- */
+@for $i from 10 through 32 {
+	.font#{$i} {
+		font-size: #{$i}px;
+	}
+}
+
+/* 外边距、内边距全局样式
+------------------------------- */
+@for $i from 1 through 50 {
+	.mt#{$i} {
+		margin-top: #{$i}px;
+	}
+
+	.mr#{$i} {
+		margin-right: #{$i}px;
+	}
+
+	.mb#{$i} {
+		margin-bottom: #{$i}px;
+	}
+
+	.ml#{$i} {
+		margin-left: #{$i}px;
+	}
+
+	.pt#{$i} {
+		padding-top: #{$i}px;
+	}
+
+	.pr#{$i} {
+		padding-right: #{$i}px;
+	}
+
+	.pb#{$i} {
+		padding-bottom: #{$i}px;
+	}
+
+	.pl#{$i} {
+		padding-left: #{$i}px;
+	}
+}
+
+// 宽度全局样式
+@for $i from 1 through 500 {
+	.width#{$i} {
+		width: #{$i}px;
+	}
+}
+
+// 高度全局样式
+@for $i from 1 through 500 {
+	.height#{$i} {
+		height: #{$i}px;
+	}
+}
+
+
+/* cursor 鼠标形状
+------------------------------- */
+// 默认
+.cursor-default {
+	cursor: default !important;
+}
+
+// 帮助
+.cursor-help {
+	cursor: help !important;
+}
+
+// 手指
+.cursor-pointer {
+	cursor: pointer !important;
+}
+
+// 移动
+.cursor-move {
+	cursor: move !important;
+}
+
+// 禁止选取文字
+.user-select{
+  user-select: none;
+}
+
+// 公共样式
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+	.button-group-item{
+		padding-left: 3px;
+	}
+}
+//清除浮动
+.clearfix{
+  zoom:1;
+  &:after{
+    display:block;
+    clear:both;
+    content:"";
+    visibility: hidden;
+    height:0;
+  }
+}
+
+/* 设置滚动条整体样式 */
+::-webkit-scrollbar {
+  width: 6px; /* 滚动条宽度 */
+  height: 6px; /* 滚动条高度，‌如果需要的话 */
+  background-color: #F5F5F5; /* 滚动条背景色 */
+}
+
+/* 设置滚动条轨道样式 */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.2); /* 内阴影效果 */
+  border-radius: 3px; /* 圆角 */
+  background-color: #F5F5F5; /* 轨道背景色 */
+}
+
+/* 设置滑块样式 */
+::-webkit-scrollbar-thumb {
+  border-radius: 2px; /* 滑块圆角 */
+  -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.4); /* 内阴影效果 */
+  background: #ccc;
+}
+
+.el-radio .el-radio__input.is-checked .el-radio__inner {
+  border-color: #1c50fd;
+  background: #1c50fd;
+}
+
+.el-radio .el-radio__input.is-checked+.el-radio__label {
+  color: #1c50fd;
+}
+
+.el-button.el-button--primary {
+  background: #1c50fd;
+  border-color: #1c50fd;
+}
+
+.el-popper.el-popover {
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 16px;
+  color: #383d47;
+  line-height: 26px;
+  box-shadow: 0px 2px 12px 0px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.12);
+  padding: 0 !important;
+}
+
+.el-popover .el-popover__title {
+  background: linear-gradient( 180deg, rgba(43,88,213,0.1) 0%, rgba(43,88,213,0) 100%);
+  font-weight: 500;
+  font-size: 20px;
+  color: #383D47;
+  line-height: 27px;
+  padding: 20px 10px 0px;
+}
+
+.abilityPopover.el-popover  .el-popover__title {
+  padding: 16px 16px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+.no-data {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 240px;
+    height: 164px;
+  }
+  div {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #383d47;
+
+  }
+}
+.pagination {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  .total {
+    // width: 58px;
+    height: 24px;
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 16px;
+    color: #272a31;
+    line-height: 24px;
+    text-align: left;
+    font-style: normal;
+    text-transform: none;
+  }
+  .el-pagination {
+    padding: 2px 0px 2px 5px;
+}
+  .el-pagination.is-background .btn-next,
+  .el-pagination.is-background .btn-prev,
+  .el-pagination.is-background .el-pager li {
+    background-color: transparent !important;
+    border-radius: 4px !important;
+    border: 1px solid #dddfe8;
+  }
+  .el-pagination.is-background .el-pager li:not(.disabled).active {
+    background: transparent;
+    border: 1px solid #3666ea;
+    font-size: 16px;
+    color: #3666ea;
+  }
+  .el-pagination.is-background .el-pager li {
+    background: transparent !important;
+    border-radius: 4px;
+    border: 1px solid #dddfe8;
+  }
+  .el-pagination .el-select .el-input .el-input__inner {
+    font-size: 16px;
+    color: #272a31;
+  }
+  .el-pagination__sizes{
+    margin-right: 0;
+  }
+  .el-pagination .el-select .el-input {
+    margin: 0 0 0 5px;
+  }
+}
+.el-textarea__inner {
+  background: #f2f5fa;
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 16px;
+  color: #383d47;
+  line-height: 24px;
+}
+.el-input__inner {
+  &:hover {
+    border-color: #D5D8DE;
+    background: #F7F8FA;
+  }
+}
+.cus-cascader .el-radio  .el-radio__inner {
+  top: -18px;
+  left: -19px;
+  border-radius: 0;
+  border: 0;
+  width: 170px;
+  height: 34px;
+  background-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: absolute;
+}
+.cus-cascader .el-radio .el-radio__inner::after {
+  display: none;
+}
+
+.cus-cascader .el-radio .el-radio__input.is-checked .el-radio__inner {
+  background: transparent;
+}
+.cus-cascader .el-cascader-menu__wrap{
+  height: 264px;
+}
+.cus-select .el-select-dropdown.is-multiple .el-select-dropdown__item.selected::after{
+  display: none;
+}
+.el-message{
+  z-index: 10000 !important;
+}
+// 覆盖 Element UI Message 的默认宽度
+.el-message {
+  min-width: auto !important;
+  width: fit-content !important;
+  padding: 15px 15px 15px 20px !important;
+}
+
+// 如果你想针对特定内容调整
+.el-message .el-message__content {
+  word-wrap: break-word;
+  word-break: break-all;
+}

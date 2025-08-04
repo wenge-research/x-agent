@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/搜索</title>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/搜索" transform="translate(3.000000, 2.792910)" fill="#1C50FD" fill-rule="nonzero">
+            <path d="M9,0 L15.2071,6.2071 L13.79289,7.62128 L10,3.82842 L10,13.41418 L8,13.41418 L8,3.82842 L4.20711,7.62128 L2.79289,6.2071 L9,0 Z M0,15.41418 L0,11.41418 L2,11.41418 L2,15.41418 C2,15.96648 2.44772,16.41418 3,16.41418 L15,16.41418 C15.5523,16.41418 16,15.96648 16,15.41418 L16,11.41418 L18,11.41418 L18,15.41418 C18,17.07108 16.6569,18.41418 15,18.41418 L3,18.41418 C1.34315,18.41418 0,17.07108 0,15.41418 Z" id="形状"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,7 @@
+{
+  "loginUrl": "http://172.16.10.11:20086/v1/cas/login?service=http://172.16.10.15:31976",
+  "ws": "ws://172.16.10.15:31164/imserver/",
+  "wss": "wss://localhost/ai-cmp-yayi/imserver/",
+  "lineloginUrl": "https://localhost/v1/cas/login?service=https://localhost/ai-sc-yayi/"
+
+}

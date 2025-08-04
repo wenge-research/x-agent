@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/过程/loading</title>
+    <defs>
+        <pattern id="pattern-1" width="100%" height="100%" patternUnits="objectBoundingBox">
+            <use xlink:href="#image-2"></use>
+        </pattern>
+        <image id="image-2" width="18" height="18" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEqADAAQAAAABAAAAEgAAAACaqbJVAAACbElEQVQ4EU2US47UMBRFX+Kkqj9V/e+m1BKiJRAzBKtgDUgM2AoDFsDi2ADMGSHRUJXEnGMnLSK57DjvHd93bVfz6ev3POWIkZ9xihjG/NQOY30/MGcbhrknbuR9yTG/S20TwSg3DS1H20a0uYmG4Ib35ckMTSg9A8cubH+1SdGZSAqNGfoSOAOF+cm5BYSQmFQ0w27PUlxuuug6FI2ujCJh4iYUGdwy76zPBGkiWcBQ+ojdRRc3Z11cnKIoJRgTpRC8JOVUpbcj88CKmqKiemZJz2/6uDvv4nqb4vwEkIrg4A3+CJxpLMoqKDpUNSophrMBr3aruL/u43ZWsz1uAaXZFxIZUk5tljMCbl2Ib3t2zPb24Sge7lbxjLIuMXl7nOJkDajvKmgxsyN5RElCoc/jX5QAeNzneP9uE6/v17G77OMcX04BHK+aWMHoehWZwc/Sa/bRKggqWxrffvyJLx938ZKSBDhfkslNHheqoDRNZoQ5/BbHTbeknm9vXhzF5w+7uMJU1Zto5OLl0hdFjZDZG+mJlVzxhJXdlZ+/BpfAC+AFJrDmmGebQVVBkQjEDVgLwgMT3a3fe/Y8KIlOpUkf/xNQdq1cCyaVLUTf1n1dvWXew+mOpbbC3Bg4JZ7QYsMTSLqH03OlCoGdfhBoupf0wAH1tPsIy8SzL9xNBSiTaFUJKQAg+qThgjJZ7qSwgXfntNwLlYlp+V5uv/I0z+QCBuocU3UnSSt3TRins+F014cAIMIAVUWln8f6UiDESSplIL9cWj5YivetnsCqjEosoRpmch0TxHwtoa4tzKuSAUz+KxA7alD50MQ/Ns4eMPr96oAAAAAASUVORK5CYII="></image>
+    </defs>
+    <g id="ico/过程/loading" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M18.364,5.63604 L16.9497,7.05025 C15.683,5.7835 13.933,5 12,5 C8.13401,5 5,8.13401 5,12 C5,15.866 8.13401,19 12,19 C15.866,19 19,15.866 19,12 L21,12 C21,16.9706 16.9706,21 12,21 C7.02944,21 3,16.9706 3,12 C3,7.02944 7.02944,3 12,3 C14.4853,3 16.7353,4.00736 18.364,5.63604 Z" id="路径" fill="url(#pattern-1)" fill-rule="nonzero"></path>
+    </g>
+</svg>

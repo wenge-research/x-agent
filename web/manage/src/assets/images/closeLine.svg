@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-670.000000, -372.000000)" fill="#768094" fill-rule="nonzero">
+            <g id="操作系统/line/close-line" transform="translate(670.000000, 372.000000)">
+                <polygon id="路径" points="11.99998 10.58584 16.94978 5.63606 18.36398 7.05027 13.41418 12.00004 18.36398 16.94974 16.94978 18.36394 11.99998 13.41424 7.05024 18.36394 5.63602 16.94974 10.58578 12.00004 5.63602 7.05027 7.05024 5.63606"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

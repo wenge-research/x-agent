@@ -1,0 +1,7 @@
+{
+  "loginUrl": "http://172.16.10.11:20086/v1/cas/login?service=http://172.16.10.15:31976",
+  "ws": "ws://172.16.10.15:31164/imserver/",
+  "wss": "wss://stg-tilake.localhost.com/ai-cmp-yayi/imserver/",
+  "lineloginUrl": "https://stg-tilake.localhost.com/v1/cas/login?service=https://stg-tilake.localhost.com/ai-sc-yayi/"
+
+}

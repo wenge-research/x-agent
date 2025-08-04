@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>img/插件/类型关键词过滤</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFC678" offset="0%"></stop>
+            <stop stop-color="#FF9443" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FF9443" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="4工具管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="插件管理-切片" transform="translate(-632.000000, -68.000000)">
+            <g id="img/插件/类型关键词过滤" transform="translate(640.000000, 72.000000)">
+                <path d="M23.9999996,1.02225014 L45.7042465,5.6261869 C46.0866783,5.70730172 46.4158331,5.90725354 46.6478826,6.18337134 C46.8681628,6.44548475 47,6.7766156 47,7.13279636 L47,32.5535636 C47,37.3243042 44.4940097,41.773048 40.3383245,44.4175749 L24,54.8146905 L7.66167778,44.4175763 C3.50601702,41.7730491 1,37.3243053 1,32.5535636 L1,7.13279636 C1,6.77662402 1.1318495,6.44550392 1.35211822,6.18339414 C1.58416654,5.90726719 1.91330844,5.70729819 2.29569039,5.62618332 L23.9999996,1.02225014 Z" id="路径" stroke-opacity="0.4" stroke="#F18932" stroke-width="2" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <path d="M24,56 L30.286,60 L17.714,60 L24,56 Z" id="形状结合" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+                <circle id="椭圆形" fill="#FFFFFF" cx="24" cy="20" r="6"></circle>
+                <rect id="矩形" fill="#FFFFFF" x="21" y="20" width="6" height="16" rx="3"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

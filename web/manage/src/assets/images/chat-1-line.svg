@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-376.000000, -328.000000)" fill="#1C50FD" fill-rule="nonzero">
+            <g id="交流/line/chat-1-line" transform="translate(376.000000, 328.000000)">
+                <path d="M10,2.25 L14,2.25 C18.4183,2.25 22,5.83172 22,10.25 C22,14.6683 18.4183,18.25 14,18.25 L14,21.75 C9,19.75 2,16.75 2,10.25 C2,5.83172 5.58172,2.25 10,2.25 Z M12,16.25 L14,16.25 C17.3137,16.25 20,13.5637 20,10.25 C20,6.93629 17.3137,4.25 14,4.25 L10,4.25 C6.68629,4.25 4,6.93629 4,10.25 C4,13.86 6.46208,16.2156 12,18.7298 L12,16.25 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

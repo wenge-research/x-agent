@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-670.000000, -416.000000)" fill="#1C50FD" fill-rule="nonzero">
+            <g id="设备/line/mac-line" transform="translate(670.000000, 416.000000)">
+                <path d="M14,17.5 L14,19.5 L16,20.5 L16,21.5 L8,21.5 L7.99639,20.5036 L10,19.5 L10,17.5 L2.9918,17.5 C2.44405,17.5 2,17.0511 2,16.4925 L2,3.50748 C2,2.95107 2.45531,2.5 2.9918,2.5 L21.0082,2.5 C21.556,2.5 22,2.94892 22,3.50748 L22,16.4925 C22,17.0489 21.5447,17.5 21.0082,17.5 L14,17.5 Z M4,4.5 L4,13.5 L20,13.5 L20,4.5 L4,4.5 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

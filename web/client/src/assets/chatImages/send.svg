@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <defs>
+        <linearGradient x1="-9.85403223%" y1="-11.0382606%" x2="111.232106%" y2="110.791882%" id="linearGradient-1">
+            <stop stop-color="#70DCFF" offset="0%"></stop>
+            <stop stop-color="#3569FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="切图" transform="translate(-41.000000, -456.000000)">
+            <g id="ico/发送" transform="translate(41.000000, 456.000000)">
+                <circle id="椭圆形" stroke-opacity="0.9" stroke="#FFFFFF" stroke-width="2" fill="url(#linearGradient-1)" cx="22" cy="22" r="19.3333333"></circle>
+                <g transform="translate(10.083333, 11.916667)" id="路径">
+                    <polygon points="0 0 22 0 22 22 0 22"></polygon>
+                    <path d="M1.78383333,8.53875 C1.30533333,8.37925 1.30075,8.12166667 1.793,7.95758333 L19.2894167,2.12575 C19.7743333,1.96441667 20.0520833,2.23575 19.9164167,2.71058333 L14.9169167,20.2060833 C14.7794167,20.691 14.4998333,20.7075 14.2945,20.2473333 L11,12.8333333 L16.5,5.5 L9.16666667,11 L1.78383333,8.53875 Z" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

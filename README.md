@@ -71,12 +71,12 @@ docker pull ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_chrome_v2
 
 ### 单网页内容爬取
 ```bash
-docker run -d -v /u01/isi/code_sdk/URL_analysis/config.yml:/app/config.yml -v /u01/isi/code_sdk/URL_analysis/main.py:/app/main.py  -p 9007:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
+docker run -d -v /u01/isi/code_sdk/URL_analysis/config.yml:/app/config.yml -v /u01/isi/code_sdk/URL_analysis/main.py:/app/main.py  -p 9007:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_chrome_v2
 ```
 
 ### 网页截图
 ```bash
-docker run -d -v /u01/isi/code_sdk/URL_to_img/config.yml:/app/config.yml -v /u01/isi/code_sdk/URL_to_img/main.py:/app/main.py  -p 5028:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
+docker run -d -v /u01/isi/code_sdk/URL_to_img/config.yml:/app/config.yml -v /u01/isi/code_sdk/URL_to_img/main.py:/app/main.py  -p 5028:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_chrome_v2
 ```
 
 ## yayi算法
@@ -99,4 +99,3 @@ docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencen
 -  算法： python
 -  数据库： mysql
 - 中间件：elasticsearch,redis,minio,nginx
-

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/比例/16:9</title>
+    <g id="ico/比例/16:9" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.7">
+        <path d="M21,6 C21.5522847,6 22,6.44771525 22,7 L22,17 C22,17.5522847 21.5522847,18 21,18 L3,18 C2.44771525,18 2,17.5522847 2,17 L2,7 C2,6.44771525 2.44771525,6 3,6 L21,6 Z M20,8 L4,8 L4,16 L20,16 L20,8 Z" id="矩形" fill="#FFFFFF" fill-rule="nonzero"></path>
+    </g>
+</svg>

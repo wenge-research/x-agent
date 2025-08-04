@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/aI生成</title>
+    <g id="ico/aI生成" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="形状" fill="#1747E5" fill-rule="nonzero" opacity="0.5" points="17.666716 1 18.985516 3.47283 21.458316 4.79167 18.985516 6.11051 17.666716 8.58334 16.347816 6.11051 13.875016 4.79167 16.347816 3.47283"></polygon>
+        <polygon id="路径" fill="#7E56EB" fill-rule="nonzero" points="20.333316 16.12505 18.666716 13.00005 17.000016 16.12505 13.875016 17.79165 17.000016 19.45835 18.666716 22.58335 20.333316 19.45835 23.458316 17.79165"></polygon>
+        <polygon id="路径" fill="#1747E5" fill-rule="nonzero" points="8.666666 4.125 11.333316 9.125 16.333316 11.79165 11.333316 14.45835 8.666666 19.45835 5.999996 14.45835 1 11.79165 5.999996 9.125"></polygon>
+    </g>
+</svg>

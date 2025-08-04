@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-376.000000, -416.000000)" fill="#828894" fill-rule="nonzero">
+            <g id="操作系统/line/delete-bin-4-line" transform="translate(376.000000, 416.000000)">
+                <path d="M20,7 L20,21 C20,21.5523 19.5523,22 19,22 L5,22 C4.44772,22 4,21.5523 4,21 L4,7 L2,7 L2,5 L22,5 L22,7 L20,7 Z M6,7 L6,20 L18,20 L18,7 L6,7 Z M7,2 L17,2 L17,4 L7,4 L7,2 Z M11,10 L13,10 L13,17 L11,17 L11,10 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,650 @@
+.outer-wrapper {
+  padding: 32px;
+  background-color: #FFFFFF;
+}
+.document-view .view-left-wrapper {
+  width: 294px;
+  height: 100%;
+  padding: 24px 24px 30px 32px;
+  border-right: 1px solid rgba(0,0,0,0.12);
+  .left-search {
+    margin-bottom: 16px;
+  }
+  .el-input {
+    width: 240px;
+    ::v-deep .el-input__inner {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+  ::v-deep .el-input__inner::-webkit-input-placeholder {
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 14px;
+    color: #B4BCCC;
+    line-height: 20px;
+  }
+  ::v-deep .el-input__inner::-moz-placeholder {
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 14px;
+    color: #B4BCCC;
+    line-height: 20px;
+  }
+  ::v-deep .el-input__inner:-ms-input-placeholder {
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 14px;
+    color: #B4BCCC;
+    line-height: 20px;
+  }
+  ::v-deep .el-input__inner::placeholder {
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 14px;
+    color: #B4BCCC;
+    line-height: 20px;
+  }
+  .all-text {
+    padding: 6px 0 6px 8px;
+    margin-bottom: 4px;
+    font-family: MiSans, MiSans;
+    font-weight: 500;
+    font-size: 16px;
+    color: #494E57;
+    line-height: 28px;
+    &.current-node {
+      background: #F4F5F8;
+      border-radius: 8px;
+    }
+    &:hover {
+      background: #F4F5F8;
+      border-radius: 8px;
+    }
+  }
+  ::v-deep .el-tree {
+    height: calc(100% - 150px);
+    overflow-y: auto;
+    .el-tree-node.is-current > .el-tree-node__content {
+      background: #F4F5F8;
+      border-radius: 8px;
+    }
+    .el-tree-node:focus > .el-tree-node__content {
+      background: #F4F5F8;
+      border-radius: 8px;
+    }
+    .el-tree-node__content {
+      height: 40px;
+      margin-bottom: 4px;
+      border-radius: 2px;
+      font-family: MiSans, MiSans;
+      font-weight: 400;
+      font-size: 14px;
+      color: #494E57;
+      line-height: 20px;
+      // padding: 8px 12px;
+      &:hover {
+        background: #F4F5F8;
+        border-radius: 8px;
+      }
+    }
+    .theme-item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 10px;
+
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      img {
+        width: 18px;
+        margin-right: 8px;
+      }
+    }
+  }
+  .tree-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    border-radius: 2px;
+    border: 1px solid #1747E5;
+    cursor: pointer;
+    img {
+      width: 18px;
+    }
+    .classisfy-btn{
+      margin-left: 8px;
+      font-family: MiSans, MiSans;
+      font-weight: 500;
+      font-size: 14px;
+      color: #1747E5;
+      line-height: 20px;
+    }
+  }
+}
+.view-right-wrapper {
+  width: calc(100% - 294px);
+  height: 100%;
+  padding: 24px 32px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  .right-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .form-box {
+    .el-form-item {
+      margin-bottom: 0px;
+    }
+    .my-input {
+      width: 348px;
+    }
+  }
+  .btns-box {
+    display: flex;
+    align-items: center;
+    .icon-export {
+      svg {
+        width: 16px;
+        vertical-align: text-top;
+        fill: #494E57;
+      }
+      &:hover {
+        svg {
+          fill: #1747E5;
+        }
+      }
+    }
+  }
+
+  .option-box {
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+  }
+  .table-btns {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    .selected-num, .el-checkbox, .el-button {
+      margin-right: 16px;
+    }
+    .selected-num {
+      font-family: MiSans, MiSans;
+      font-weight: 400;
+      font-size: 14px;
+      color: #828894;
+      .num {
+        margin-left: 4px;
+        color: #1747E5;
+      }
+    }
+  }
+  .table-box {
+    flex-grow: 1;
+    ::v-deep .my-table.el-table .el-table__header .el-table__cell .cell {
+      padding: 10px 12px; 
+    }
+  }
+}
+// 抽屉样式
+.my-drawer {
+  .qa-box {
+    position: relative;
+    padding-bottom: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .content {
+      padding: 0 32px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .footer {
+      
+    }
+
+    .el-select {
+      width: 100%;
+    }
+
+    .el-date-editor {
+      width: 100%;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  ::v-deep .el-drawer__container {
+    .el-drawer {
+      min-width: 370px;
+    }
+    .el-drawer__header {
+      padding: 32px 32px 16px;
+      margin-bottom: 20px;
+      font-family: MiSans, MiSans;
+      font-weight: 500;
+      font-size: 20px;
+      color: #494E57;
+      line-height: 24px;
+    }
+    .el-drawer__body {
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: right;
+        padding-right: 32px;
+        padding-bottom: 32px;
+        background-color: #fff;
+      }
+    }
+    
+    .switch-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .switch-label {
+        margin-bottom: 4px;
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #494E57;
+        line-height: 20px;
+      }
+      .switch-desc {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 12px;
+        color: #828894;
+        line-height: 16px;
+      }
+    }
+    .radio-item {
+      display: flex;
+      align-items: center;
+      .el-form-item__label {
+        min-width: 96px;
+        margin-bottom: 0 !important;
+        text-align: left;
+      }
+    }
+
+    .el-form-item {
+      margin-bottom: 24px;
+      .el-form-item__label {
+        position: relative;
+        margin-bottom: 8px;
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #828894;
+        line-height: 20px;
+        &:before {
+          position: absolute;
+          right: 0;
+        }
+      }
+      .el-input__count {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+      .el-textarea {
+        .el-input__count {
+          right: auto;
+          bottom: 6px;
+          left: 15px;
+        }
+      }
+      .el-cascader {
+        display: block;
+      }
+      /* 使用深度选择器修改placeholder的样式 */
+      .el-textarea__inner::-webkit-input-placeholder, .el-input__inner::-webkit-input-placeholder {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+      .el-textarea__inner::-webkit-input-placeholder, .el-input__inner::-moz-placeholder {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+      .el-textarea__inner::-webkit-input-placeholder, .el-input__inner:-ms-input-placeholder {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+      .el-textarea__inner::-webkit-input-placeholder, .el-input__inner::placeholder {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+    }
+  }
+  
+}
+// 弹框样式
+.my-dialog {
+  ::v-deep .el-dialog {
+    border-radius: 4px;
+    .el-dialog__header {
+      padding: 32px 0 16px 32px;
+      .el-dialog__title {
+        font-family: MiSans, MiSans;
+        font-weight: 500;
+        font-size: 20px;
+        color: #494E57;
+        line-height: 24px;
+      }
+      .el-dialog__headerbtn {
+        top: 34px;
+        right: 36px;
+      }
+      .el-dialog__close {
+        color: #828894;
+        font-size: 20px;
+      }
+    }
+    .el-dialog__body {
+      padding: 8px 32px 4px;
+    }
+    .el-dialog__footer {
+      padding: 0 32px 32px;
+      .el-button {
+        padding: 9px 21px;
+        border-radius: 2px;
+        font-family: MiSans, MiSans;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .my-dialog-footer {
+      margin-top: 24px;
+    }
+    .el-form-item {
+      margin-bottom: 20px;
+      .el-form-item__label {
+        position: relative;
+        margin-bottom: 8px;
+        font-family: MiSans, MiSans;
+        font-weight: 500;
+        font-size: 14px;
+        color: #494E57;
+        line-height: 20px;
+        &:before {
+          position: absolute;
+          right: 0;
+        }
+      }
+      .el-input__count {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+      .el-textarea {
+        .el-input__count {
+          right: auto;
+          bottom: 6px;
+          left: 15px;
+        }
+      }
+      /* 使用深度选择器修改placeholder的样式 */
+      .el-textarea__inner::-webkit-input-placeholder, .el-input__inner::-webkit-input-placeholder {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+      .el-textarea__inner::-webkit-input-placeholder, .el-input__inner::-moz-placeholder {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+      .el-textarea__inner::-webkit-input-placeholder, .el-input__inner:-ms-input-placeholder {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+      .el-textarea__inner::-webkit-input-placeholder, .el-input__inner::placeholder {
+        font-family: MiSans, MiSans;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B4BCCC;
+        line-height: 20px;
+      }
+    }
+    .el-upload {
+      width: 100%;
+      .el-upload-dragger {
+        width: 100%;
+      }
+    }
+  }
+}
+// 表格样式
+::v-deep .my-table.el-table {
+  .el-table__header {
+    .el-table__cell{
+      padding: 0;
+      border-right: 1px solid #fff;
+      background: #F2F4F7;
+      .cell {
+        padding: 3px 12px;
+        background: #F2F4F7;
+        font-family: MiSans, MiSans;
+        font-weight: 500;
+        font-size: 14px;
+        color: #828894;
+        line-height: 20px;
+      }
+    }
+  }
+  .el-button--text:not(.is-disabled) {
+    color: #1747E5;
+  }
+  // 斑马格
+  .el-table__body {
+    tr.el-table__row--striped td.el-table__cell {
+      background: #F7F8FA;
+    }
+  }
+}
+.el-switch {
+  height: 16px;
+  ::v-deep .el-switch__core {
+    height: 16px;
+    &:after {
+      top: 2px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  &.switch-on {
+    ::v-deep .el-switch__core {
+      &:after {
+        margin-left: -10px;
+      }
+    }
+  }
+}
+.switch-status-text {
+  margin-left: 4px;
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 14px;
+  color: #494E57;
+  line-height: 20px;
+}
+// 分页样式
+::v-deep .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  .total-num {
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 14px;
+    color: #272A31;
+    line-height: 20px;
+  }
+  button, li {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #DDDFE8;
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 14px;
+    color: #272A31;
+  }
+  .active {
+    color: #1747E5;
+  }
+  .el-input__inner, .el-pagination__sizes, .el-pagination__jump {
+    height: 32px;
+    line-height: 32px;
+  }
+  .el-pagination__sizes {
+    margin-right: 7px;
+  }
+  .el-pagination__jump {
+    margin-left: 0;
+    font-family: MiSans, MiSans;
+    font-weight: 400;
+    font-size: 14px;
+    color: #272A31;
+    line-height: 20px;
+  }
+}
+// .my-input.el-input {
+//   width: 334px;
+//   ::v-deep .el-input__inner {
+//     height: 40px;
+//     line-height: 40px;
+//   }
+// }
+.icon-refresh {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  border: 1px solid #D5D8DE;
+  cursor: pointer;
+  svg {
+    width: 18px;
+    vertical-align: text-top;
+    fill: #828894;
+  }
+  &:hover {
+    border: 1px solid #1747E5;
+    svg {
+      fill: #1747E5;
+    }
+  }
+}
+.icon-primary-self {
+  svg {
+    width: 16px;
+    vertical-align: text-top;
+    fill: #fff;
+  }
+  &:hover {
+    svg {
+      fill: #fff;
+    }
+  }
+}
+.icon-plain-self {
+  svg {
+    width: 16px;
+    vertical-align: text-top;
+    fill: #494E57;
+  }
+  &:hover {
+    svg {
+      fill: #1747E5;
+    }
+  }
+}
+.icon-primary-self {
+  svg {
+    width: 16px;
+    vertical-align: text-top;
+    fill: #fff;
+  }
+  &:hover {
+    svg {
+      fill: #fff;
+    }
+  }
+}
+.el-button.el-button--text {
+  color: #1747E5;
+}
+.el-button.el-button--text.is-disabled {
+  color: #BCC1CC;
+}
+::v-deep .el-input__inner::-webkit-input-placeholder {
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B4BCCC;
+  line-height: 20px;
+}
+::v-deep .el-input__inner::-moz-placeholder {
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B4BCCC;
+  line-height: 20px;
+}
+::v-deep .el-input__inner:-ms-input-placeholder {
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B4BCCC;
+  line-height: 20px;
+}
+::v-deep .el-input__inner::placeholder {
+  font-family: MiSans, MiSans;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B4BCCC;
+  line-height: 20px;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-切片" transform="translate(-536.000000, -42.000000)" fill-rule="nonzero">
+            <g id="ico/aI生成" transform="translate(536.000000, 42.000000)">
+                <polygon id="形状" fill="#2A70F5" opacity="0.5" points="23.5556213 1.33333333 25.3140213 4.63044 28.611088 6.38889333 25.3140213 8.14734667 23.5556213 11.4444533 21.797088 8.14734667 18.5000213 6.38889333 21.797088 4.63044"></polygon>
+                <polygon id="路径" fill="#2560CF" points="27.111088 21.5000667 24.8889547 17.3334 22.666688 21.5000667 18.5000213 23.7222 22.666688 25.9444667 24.8889547 30.1111333 27.111088 25.9444667 31.2777547 23.7222"></polygon>
+                <polygon id="路径" fill="#2A70F5" points="11.5555547 5.5 15.111088 12.1666667 21.7777547 15.7222 15.111088 19.2778 11.5555547 25.9444667 7.99999467 19.2778 1.33333333 15.7222 7.99999467 12.1666667"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

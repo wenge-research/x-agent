@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页-切片" transform="translate(-44.000000, -1522.000000)" fill="#54B5FF" fill-rule="nonzero">
+            <g id="文件/fill/file-image-fill" transform="translate(44.000000, 1522.000000)">
+                <path d="M21,7 L16,2 L3.9934,2 C3.44495,2 3,2.44405 3,2.9918 L3,21.0082 C3,21.5447 3.44476,22 3.9934,22 L20.0066,22 C20.5551,22 21,21.556 21,21.0082 L21,7 Z M11,9.5 C11,10.3284 10.3284,11 9.5,11 C8.67157,11 8,10.3284 8,9.5 C8,8.67157 8.67157,8 9.5,8 C10.3284,8 11,8.67157 11,9.5 Z M17.5,17 L8,17 L13.5,10 L17.5,17 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

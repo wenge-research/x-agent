@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/停止回答</title>
+    <g id="ico/停止回答" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="蒙版" stroke="#3F4247" stroke-width="2" cx="20" cy="20" r="15"></circle>
+        <g id="媒体/fill/stop-fill" transform="translate(14.166667, 14.166667)" fill="#3F4247" fill-rule="nonzero">
+            <path d="M0.833333333,-1.77635684e-15 L10.8333333,-1.77635684e-15 C11.2935833,-1.77635684e-15 11.6666667,0.3731 11.6666667,0.833333333 L11.6666667,10.8333333 C11.6666667,11.2935833 11.2935833,11.6666667 10.8333333,11.6666667 L0.833333333,11.6666667 C0.3731,11.6666667 -1.77635684e-15,11.2935833 -1.77635684e-15,10.8333333 L-1.77635684e-15,0.833333333 C-1.77635684e-15,0.3731 0.3731,-1.77635684e-15 0.833333333,-1.77635684e-15 Z" id="路径"></path>
+        </g>
+    </g>
+</svg>

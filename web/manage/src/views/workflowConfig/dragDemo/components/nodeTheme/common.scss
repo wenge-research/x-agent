@@ -1,0 +1,343 @@
+.node {
+  width: 296px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #d3d9e6;
+  position: relative;
+  .head {
+    width: 100%;
+    height: 27px;
+    background: #d1e0fe;
+    border-radius: 7px 7px 0px 0px;
+    padding: 0 16px;
+    .status {
+      margin-left: 4px;
+      font-family: MiSans, MiSans;
+      font-weight: 400;
+      font-size: 14px;
+      color: #383d47;
+    }
+    .open {
+      margin-left: auto;
+      cursor: pointer;
+      font-family: MiSans, MiSans;
+      font-weight: 400;
+      font-size: 14px;
+      color: #1c50fd;
+      line-height: 20px;
+    }
+  }
+  &-content {
+    padding: 12px 16px 0;
+  }
+  .tit {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  &:hover .el-icon-error {
+    display: block;
+  }
+  .custom-list {
+    line-height: 38px;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .model {
+    margin-bottom: 8px;
+    &-label {
+      width: 40px;
+      font-family: MiSans, MiSans;
+      font-weight: 400;
+      font-size: 12px;
+      color: #383d47;
+      line-height: 20px;
+      margin-right: 8px;
+    }
+    &-right {
+      flex: 1;
+      font-family: MiSans, MiSans;
+      font-weight: 400;
+      font-size: 12px;
+      color: #383d47;
+
+      &-box {
+        background: #f0f4fa;
+        padding: 2px 8px 4px;
+        border-radius: 4px;
+        margin-right: 14px;
+        width: fit-content;
+      }
+
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 4px;
+      }
+
+      iconpark-icon {
+        margin-right: 4px;
+      }
+    }
+    // 引用
+    &-quote {
+      border-radius: 4px;
+      font-family: MiSans, MiSans;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .no-config {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}
+
+.node img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.node .label {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 114px;
+  margin-left: 8px;
+  color: #383d47;
+  font-size: 12px;
+}
+
+.node .status {
+  flex-shrink: 0;
+}
+.node .el-icon-error {
+  color: #e15c42;
+  position: absolute;
+  cursor: pointer;
+  z-index: 200;
+  right: -6px;
+  top: -5px;
+  font-size: 18px;
+  display: none;
+}
+
+// .node.success {
+//   border-left: 4px solid #52c41a;
+// }
+
+// .node.failed {
+//   border-left: 4px solid #ff4d4f;
+// }
+
+.node.running .status img {
+  animation: spin 1s linear infinite;
+}
+
+.x6-node-selected .node {
+  border:2px solid #1890ff;
+  // box-shadow: 0 0 0 4px #d4e8fe;
+}
+
+// .x6-node-selected .node.success {
+//   border-color: #52c41a;
+//   box-shadow: 0 0 0 4px #ccecc0;
+// }
+
+// .x6-node-selected .node.failed {
+//   border-color: #ff4d4f;
+//   box-shadow: 0 0 0 4px #fedcdc;
+// }
+
+.x6-edge:hover path:nth-child(2) {
+  stroke: #1890ff;
+  stroke-width: 1px;
+}
+
+.x6-edge-selected path:nth-child(2) {
+  stroke: #1890ff;
+  stroke-width: 1.5px !important;
+}
+
+@keyframes running-line {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.type-list {
+  li {
+    background: #f0f4fa;
+    margin: 6px 0;
+    padding: 2px 4px;
+    line-height: 20px;
+    border-radius: 4px;
+  }
+  .name {
+    font-size: 12px;
+    color: #999;
+  }
+  .content {
+    font-size: 12px;
+    height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #383d47;
+  }
+  .content2 {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 控制显示的行数 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 36px;
+  }
+}
+.Ec-x6-icon ::v-deep .el-collapse {
+  border: none;
+  height: calc(100vh - 250px);
+  overflow: auto;
+  .el-collapse-item {
+    margin-bottom: 10px;
+    position: relative;
+    .el-collapse-item__arrow {
+      position: absolute;
+      left: 10px;
+      font-size: 12px;
+    }
+    &.is-active {
+      .el-collapse-item__header {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+  }
+  .el-collapse-item__wrap,
+  .el-collapse-item__header {
+    border: none;
+  }
+  .el-collapse-item__wrap {
+    padding: 0px 16px 10px 16px;
+    border-radius: 0 0 8px 8px;
+    background: #f2f5fa;
+  }
+  .el-collapse-item__header {
+    background: #f2f5fa;
+    border-radius: 4px;
+    padding: 0 26px;
+    color: #383d47;
+    font-size: 14px;
+  }
+  .el-collapse-item__content {
+    padding: 0;
+    .el-select,
+    .el-input-number {
+      width: 100%;
+    }
+  }
+}
+
+.node .icon-more,
+.icon-outer {
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(90deg);
+  cursor: pointer;
+  border-radius: 4px;
+  i {
+    color: #828894;
+  }
+  &:hover {
+    background: rgba(180, 188, 204, 0.2);
+  }
+}
+
+.node .icon-outer {
+  transform: rotate(0);
+  margin-right: 4px;
+}
+
+// .model{
+//   background: #f2f4f7;
+//   border-radius: 4px;
+//   padding: 6px 8px 6px 30px;
+//   position: relative;
+//   margin: 12px 0 8px;
+//   img{
+//     position: absolute;
+//     top: 2px;
+//     left: 6px;
+//   }
+// }
+// 知识库/敏感词库共用
+.card-list {
+  li {
+    background: #f0f4fa;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+
+  .name {
+    font-size: 12px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #383d47;
+  }
+  .sub-name {
+    font-size: 12px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #383d47;
+    max-width: 180px;
+    line-height: 18px;
+  }
+}
+
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.result-cont {
+  width: 100%;
+  span {
+      position: relative;
+      color: #676f83;
+      left: 8px;
+      font-size: 12px;
+  }
+}

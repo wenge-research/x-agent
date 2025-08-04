@@ -1,0 +1,205 @@
+/**------------------图片预览-------------------------**/
+#IMGP_BG{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background:rgba(0,0,0,0.5);
+	display:none;
+	top:0;
+	left: 0;
+	z-index: 2000;
+}
+#IMGP_BG #IMGSHOW_BG{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	position: relative;
+	z-index: 2001;
+}
+#IMGP_BG #IMGSHOW_BG #IMGSHOW_BOX{
+	width: 100%;
+	height: 100%;
+	line-height:100%;
+	text-align: center; 
+	position: absolute;
+	z-index: 2002;
+}
+#IMGP_BG #IMGSHOW_BG #IMGSHOW_NOW{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+  	max-height: 100%;
+  	vertical-align:middle;
+  	z-index:2003;
+	  display: inline-block;
+}
+#IMGP_BG #IMGSHOW_BG #IMGSHOW_LAST{
+	width: 100px;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-size:45px 200px;
+	background-position: center center;
+	position:absolute;
+	left:0;
+	top:15%;
+	bottom:0;
+	opacity: 0.2;
+	cursor:pointer;
+	z-index:2004;
+}
+#IMGP_BG #IMGSHOW_BG #IMGSHOW_NEXT{
+	width: 100px;
+	height:400px;
+	background-repeat: no-repeat;
+	background-size:45px 200px;
+	background-position: center center;
+	position:absolute;
+	top:15%;
+	bottom:0;
+	right:0;
+	opacity: 0.2;
+	cursor:pointer;
+	z-index:2004;
+}
+#IMGP_BG #IMGSHOW_BG #IMGSHOW_CLOSE{
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor:pointer;
+	color: #dadada;
+	background: rgba(0, 0, 0, 0.9);
+	z-index:2004;
+	border-radius: 50%;
+	line-height: 32px;
+	text-align: center;
+}
+#IMGP_BG #IMGSHOW_BG #IMGSHOW_CLOSE:hover{
+}
+#IMGP_BG #IMGSHOW_BG:hover #IMGSHOW_LAST{
+	background-color: rgba(0, 0, 0, 0.16);
+}
+#IMGP_BG #IMGSHOW_BG:hover #IMGSHOW_NEXT{
+	background-color: rgba(0, 0, 0, 0.16);
+}
+#IMGP_BG #IMGSHOW_BG .notFullScreen{
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	cursor:pointer;
+	background-position: -126px 0px;
+	z-index:2005;
+}
+#IMGP_BG #IMGSHOW_BG .notFullScreen:hover{
+	background-position: -300px 0px;
+}
+#IMGP_BG #IMGSHOW_BG .isFullScreen{
+	width: 42px;
+	height: 42px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	cursor:pointer;
+	background-position: -83px 0px;
+	z-index:2005;
+}
+#IMGP_BG #IMGSHOW_BG .isFullScreen:hover{
+	background-position: -258px 0px;
+}
+/*----------预览--------*/
+#IMGP_BG #IMGP_P_BG{
+	width:100%;
+	height:100px;
+	bottom:0;
+	position:absolute;
+	overflow: hidden;
+	z-index:2404;
+}
+
+#IMGP_BG #IMGP_P_BG #IMGP_BOX{
+	
+	width:100%;
+	max-width: 100%;
+	height:100px;
+	bottom:-100px;
+	position: relative;
+	line-height: 100px;
+	text-align: center;
+	overflow: hidden;
+	-webkit-transition: all 0.5s ease;/* Safari and Chrome or liebao*/
+	-moz-transition: all 0.5s ease;/*Firefox */
+	-o-transition: all 0.5s ease;/*Opera */
+	-ms-transition: all 0.5s ease;/*for ie*/
+	transition: all 0.5s ease;
+}
+#IMGP_BG #IMGP_P_BG:hover #IMGP_BOX{
+	bottom: 0;
+	background:rgba(0,0,0,0.5);
+}
+#IMGP_BG #IMGP_P_BG #IMGP_BOX #IMGP_IMGS{
+	width: auto;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right:0;
+	-webkit-transition: all 0.5s ease;/* Safari and Chrome or liebao*/
+	-moz-transition: all 0.5s ease;/*Firefox */
+	-o-transition: all 0.5s ease;/*Opera */
+	-ms-transition: all 0.5s ease;/*for ie*/
+	transition: all 0.5s ease;
+}
+#IMGP_BG #IMGP_P_BG #IMGP_LAST{
+	width: 50px;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: 20px 71%;
+	background-position: center center;
+	position: absolute;
+	top:0;
+	left: 0;
+	cursor:pointer;
+}
+#IMGP_BG #IMGP_P_BG #IMGP_NEXT{
+	width: 50px;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: 20px 71%;
+	background-position: center center;
+	position: absolute;
+	top:0;
+	right: 0;
+	cursor:pointer;
+}
+#IMGP_BG #IMGP_P_BG:hover #IMGP_LAST{
+	background-color: rgba(0,0,0,0.3);
+}
+#IMGP_BG #IMGP_P_BG:hover #IMGP_NEXT{
+	background-color: rgba(0,0,0,0.3);
+}
+#IMGP_BG #IMGP_P_BG #IMGP_BOX .imgp_k{
+	width: 100px;
+	height: 85%;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+	text-align: center;
+	line-height:81px;
+	border:solid 1px rgba(250, 250, 250, 0.06);
+	box-shadow: 0 0 3px rgba(3,103,203,0.4);
+	cursor:pointer;
+}
+#IMGP_BG #IMGP_P_BG #IMGP_BOX .imgp_k:hover{
+	border:solid 1px rgba(240, 111, 3, 0.06);
+	box-shadow: 0 0 3px rgba(240, 111, 3, 0.87);
+}
+#IMGP_BG #IMGP_P_BG #IMGP_BOX .imgp{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+  	max-height: 100%;
+  	vertical-align:middle;
+  	
+}

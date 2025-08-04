@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ico/发送</title>
+    <g id="ico/发送" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="路径" points="0 0 24 0 24 24 0 24"></polygon>
+        <path d="M1.946,9.315 C1.424,9.141 1.419,8.86 1.956,8.681 L21.043,2.319 C21.572,2.143 21.875,2.439 21.727,2.957 L16.273,22.043 C16.123,22.572 15.818,22.59 15.594,22.088 L12,14 L18,6 L10,12 L1.946,9.315 Z" id="路径" fill="#C6C6D2" fill-rule="nonzero"></path>
+    </g>
+</svg>

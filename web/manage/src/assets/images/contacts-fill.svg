@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-670.000000, -548.000000)" fill="#768094" fill-rule="nonzero">
+            <g id="用户&amp;表情/fill/contacts-fill" transform="translate(670.000000, 548.000000)">
+                <path d="M1,22.5 C1,18.0817 4.58172,14.5 9,14.5 C13.4183,14.5 17,18.0817 17,22.5 L1,22.5 Z M9,13.5 C5.685,13.5 3,10.815 3,7.5 C3,4.185 5.685,1.5 9,1.5 C12.315,1.5 15,4.185 15,7.5 C15,10.815 12.315,13.5 9,13.5 Z M19,17.5 L23,17.5 L23,19.5 L19,19.5 L19,17.5 Z M16,12.5 L23,12.5 L23,14.5 L16,14.5 L16,12.5 Z M18,7.5 L23,7.5 L23,9.5 L18,9.5 L18,7.5 Z" id="形状"></path>
+            </g>
+        </g>
+    </g>
+</svg>

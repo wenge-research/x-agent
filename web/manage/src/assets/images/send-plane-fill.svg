@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <g id="1应用管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-670.000000, -504.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="商务/fill/send-plane-fill" transform="translate(670.000000, 504.000000)">
+                <path d="M2.28707993,8.9553047 C1.76453993,8.7811247 1.76040993,8.5000947 2.29782993,8.3209547 L21.3840099,1.9588847 C21.9125099,1.7827247 22.2156099,2.0785347 22.0675099,2.5968147 L16.6143099,21.6830747 C16.4633099,22.2114747 16.1587099,22.2298747 15.9354099,21.7274747 L12.3409099,13.6398747 L18.3409099,5.6399247 L10.3409299,11.6398747 L2.28707993,8.9553047 Z" id="路径"></path>
+            </g>
+        </g>
+    </g>
+</svg>
