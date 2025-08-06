@@ -1,0 +1,65 @@
+package com.wenge.model.entity;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.mybatisflex.annotation.Column;
+import com.mybatisflex.annotation.Id;
+import com.mybatisflex.annotation.KeyType;
+import com.mybatisflex.annotation.Table;
+import com.mybatisflex.core.query.QueryWrapper;
+import com.wenge.oauth.constants.MybatisFiledConstant;
+import com.wg.appframe.mybatisflex.annotate.OnFieldFill;
+import com.wg.appframe.mybatisflex.core.FlexModel;
+import com.wg.appframe.mybatisflex.enums.FieldFill;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
+@ApiModel
+@Data(staticConstructor = "create")
+@Table(value = "application_api_markdown")
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class ApplicationApiMarkdown extends FlexModel<ApplicationApiMarkdown> {
+    @Id(value = "id", keyType = KeyType.Auto)
+    @ApiModelProperty(value = "主键，自增id，没有业务作用")
+    private Long id;
+
+    @Column("application_id")
+    @ApiModelProperty(value = "应用ID")
+    private String applicationId;
+
+    @Column("name")
+    @ApiModelProperty(value = "文档名称")
+    private String name;
+
+    @Column("content")
+    @ApiModelProperty(value = "文档内容")
+    private String content;
+
+    @Column("status")
+    @ApiModelProperty(value = "0-有效  1-删除")
+    private Integer status;
+
+    @Column("create_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @ApiModelProperty(value = "创建时间")
+    @OnFieldFill(fill = FieldFill.INSERT_UPDATE, mdcKey = MybatisFiledConstant.MDC_USER_NAME)
+    private Date createTime;
+
+    @Column("update_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @ApiModelProperty(value = "更新时间")
+    @OnFieldFill(fill = FieldFill.INSERT_UPDATE, mdcKey = MybatisFiledConstant.MDC_USER_NAME)
+    private Date updateTime;
+
+    @Column(ignore = true)
+    private QueryWrapper currentWrapper;
+
+}

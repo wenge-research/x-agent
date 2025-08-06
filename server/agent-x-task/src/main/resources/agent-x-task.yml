@@ -1,0 +1,110 @@
+server:
+  port: 8792
+  tomcat:
+    threads:
+      max: 1000
+      min-spare: 100
+    accept-count: 1000
+    max-connections: 10000
+    accesslog:
+      directory: /app/logs/access
+  servlet:
+    context-path: /
+    session:
+      cookie:
+        name: OAUTH2SESSION
+        path: /
+      timeout: 10800
+spring:
+  profiles:
+    active: uat
+  application:
+    name: agent-x-task
+    cnName: x-agent任务器
+  servlet:
+    multipart:
+      max-file-size: 300MB
+      max-request-size: 300MB
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+
+
+task:
+  agentx:
+    host: http://localhost:8383
+  # 解析文档定时器
+  document:
+    enable: false
+    cron: 0 0/10 * * * ?
+  media:
+    enable: false
+    cron: 0 0/20 * * * ?
+  image:
+    enable: false
+    cron: 0 0/15 * * * ?
+  stepclear:
+    enable: false
+    cron: 0 0 0 1/1 * ?
+  guanxin:
+    enable: false
+    cron: 0 0/2 * * * ?
+  lhonline:
+    enable: false
+    cron: 0 0 0 1/2 * ?
+  gdGov:
+    enable: true
+    cron: 0 0 0 1/2 * ?
+    knowledgeId: xxxxxxx
+  guide:
+    enable: false
+    cron: 0 0 0 1/2 * ?
+    api: xxxxx
+  url:
+    enable: false
+    cron: 0 0/15 * * * ?
+  trans:
+    enable: false
+    cron: 0 0/20 * * * ?
+  analysis:
+    enable: false
+    cron: 0 0 6 * * ?
+  callApi:
+    enable: true
+    cron: 0 0/10 * * * ?
+  workflowTrigger:
+    enable: true
+    cron: 0 0/10 * * * ?
+  funDivision:
+    enable: false
+    cron: 0 0/10 * * * ?
+  GkStory:
+    enable: false
+    cron: 0 0 0 1 1/1 ?
+    columnApi: xxxx
+    storyApi: XXXXXX
+    channelId: xxxx
+    appKey: xxxx
+    appSecret: xxxx
+  cac:
+    enable: false
+    api: xxxxxx
+    cron: 0 0 0 1 1/7 ?
+  XBGCStory:
+    enable: false
+    cron: 0 0 2 * * ?
+    columnApi: xxxxx
+    storyApi: xxxxxx
+    channelId: xxxx
+    appKey: xxxxx
+    appSecret: xxxx
+  RDJCUser:
+    enable: false
+    cron: 0 0 1 * * ?
+  hkDocument:
+    enable: true
+    knowledgeId: xxxx
+    apiUrl: xxxxx

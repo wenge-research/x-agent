@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wenge.model.mapper.DataSourceParserInfoMapper">
+
+    <select id="unionData" resultType="com.wenge.model.vo.StructureParserVo">
+        select
+        id as id,
+        data_source_id as businessId,
+        create_time as createTime,
+        'datasource' as type,
+        parser_flag as parserFlag,
+        enable_flag as enableFlag,
+        delete_flag as deleteFlag,
+        valid_date as validDate,
+        description as  description,
+        update_user as  updateUser,
+        create_user as  createUser,
+        knowledge_id as  knowledgeId,
+        '0' as synchStatus
+        from
+        data_source_parser_info
+        <where>
+            <if test="param.desc != null and param.desc != ''">
+                and description like concat('%', #{param.desc}, '%')
+            </if>
+            <if test="param.knowledgeId != null and param.knowledgeId != ''">
+                and knowledge_id = #{param.knowledgeId}
+            </if>
+            <if test="param.knowledgeIds != null and param.knowledgeIds.size() > 0">
+                AND knowledge_id IN
+                <foreach collection="param.knowledgeIds" item="id" open="(" separator="," close=")"> #{id}
+                </foreach>
+            </if>
+            <if test="foldersIdList != null and foldersIdList.size() > 0">
+                and folders_Id in
+                <foreach collection="foldersIdList" item="foldersId" open="(" separator="," close=")"> #{foldersId}
+                </foreach>
+            </if>
+            and delete_flag=0
+        </where>
+        union
+        select
+        id as id,
+        excel_id as businessId,
+        create_time as createTime,
+        'excel' as type,
+        parser_flag as parserFlag,
+        enable_flag as enableFlag,
+        delete_flag as deleteFlag,
+        valid_date as validDate,
+        description as  description,
+        update_user as  updateUser,
+        create_user as  createUser,
+        knowledge_id as  knowledgeId,
+        synch_status as synchStatus
+        from
+        excel_parser_file
+        <where>
+            <if test="param.desc != null and param.desc != ''">
+                and description like concat('%', #{param.desc}, '%')
+            </if>
+            <if test="param.knowledgeId != null and param.knowledgeId != ''">
+                and knowledge_id = #{param.knowledgeId}
+            </if>
+            <if test="param.knowledgeIds != null and param.knowledgeIds.size() > 0">
+                AND knowledge_id IN
+                <foreach collection="param.knowledgeIds" item="id" open="(" separator="," close=")"> #{id}
+                </foreach>
+            </if>
+            <if test="foldersIdList != null and foldersIdList.size() > 0">
+                and folders_Id in
+                <foreach collection="foldersIdList" item="foldersId" open="(" separator="," close=")"> #{foldersId}
+                </foreach>
+            </if>
+        </where>
+        ORDER BY createTime DESC
+        LIMIT #{startIndex}, #{pageSize}
+    </select>
+
+    <select id="unionDataCount" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM (
+        SELECT
+        id AS id,
+        data_source_id AS businessId,
+        create_time AS createTime,
+        'datasource' AS type,
+        parser_flag AS parserFlag,
+        enable_flag as enableFlag,
+        valid_date as validDate,
+        description AS description
+        FROM
+        data_source_parser_info
+        <where>
+            <if test="queryDesc != null and queryDesc != ''">
+                and description like concat('%', #{queryDesc}, '%')
+            </if>
+            <if test="param.deleteFlag != null and param.deleteFlag">
+                and delete_flag = #{param.deleteFlag}
+            </if>
+            <if test="param.knowledgeId != null and param.knowledgeId != ''">
+                and knowledge_id = #{param.knowledgeId}
+            </if>
+            <if test="param.knowledgeIds != null and param.knowledgeIds.size() > 0">
+                AND knowledge_id IN
+                <foreach collection="param.knowledgeIds" item="id" open="(" separator="," close=")"> #{id}
+                </foreach>
+            </if>
+            <if test="foldersIdList != null and foldersIdList.size() > 0">
+                and folders_Id in
+                <foreach collection="foldersIdList" item="foldersId" open="(" separator="," close=")"> #{foldersId}
+                </foreach>
+            </if>
+        </where>
+        UNION
+        SELECT
+        id AS id,
+        excel_id AS businessId,
+        create_time AS createTime,
+        'excel' AS type,
+        parser_flag AS parserFlag,
+        enable_flag as enableFlag,
+        valid_date as validDate,
+        description AS description
+        FROM
+        excel_parser_file
+        <where>
+            <if test="queryDesc != null and queryDesc != ''">
+                and description like concat('%', #{queryDesc}, '%')
+            </if>
+            <if test="param.deleteFlag != null and param.deleteFlag">
+                and delete_flag = #{param.deleteFlag}
+            </if>
+            <if test="param.knowledgeId != null and param.knowledgeId != ''">
+                and knowledge_id = #{param.knowledgeId}
+            </if>
+            <if test="param.knowledgeIds != null and param.knowledgeIds.size() > 0">
+                AND knowledge_id IN
+                <foreach collection="param.knowledgeIds" item="id" open="(" separator="," close=")"> #{id}
+                </foreach>
+            </if>
+            <if test="foldersIdList != null and foldersIdList.size() > 0">
+                and folders_Id in
+                <foreach collection="foldersIdList" item="foldersId" open="(" separator="," close=")"> #{foldersId}
+                </foreach>
+            </if>
+        </where>
+        ) AS subquery;
+    </select>
+
+    <select id="getDataSourceParserInfoNum" resultType="com.wenge.model.dto.result.KnowledgeInoDataNumResult">
+        select knowledgeId, count(id) dataNum
+        from (SELECT id,
+                     knowledge_id as knowledgeId
+              FROM data_source_parser_info
+              where delete_flag = '0'
+              UNION
+              SELECT id,
+                     knowledge_id as knowledgeId
+              FROM excel_parser_file
+              where delete_flag = '0') AS subquery
+        group by knowledgeId
+    </select>
+</mapper>

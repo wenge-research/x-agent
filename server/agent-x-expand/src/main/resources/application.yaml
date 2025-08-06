@@ -1,0 +1,32 @@
+server:
+  port: 8790
+spring:
+  profiles:
+    active: uat
+  application:
+    name: agent-x-expand
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  config:
+    import:
+      - optional:nacos:agent-x-expand.yml
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: yayi-model-agent
+        username: xxxx
+        password: 5qxi3KABV!#%xPo
+
+      config:
+        enabled: true
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        namespace: yayi-model-agent
+        username: xxxx
+        password: 5qxi3KABV!#%xPo
+

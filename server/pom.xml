@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.wenge</groupId>
+        <artifactId>wg-yayi</artifactId>
+        <version>1.9.3.RELEASES</version>
+    </parent>
+
+    <artifactId>yayi-model-agent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>model-agent-server</module>
+        <module>oauth-server</module>
+        <module>agent-x-expand</module>
+        <module>agent-x-task</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <poi-ooxml.version>5.0.0</poi-ooxml.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.wenge</groupId>
+            <artifactId>appframe-cloud-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wenge</groupId>
+            <artifactId>appframe-mybatis-flex-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wenge</groupId>
+            <artifactId>appframe-comon-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.wenge</groupId>
+            <artifactId>appframe-redis-starter</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

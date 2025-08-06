@@ -1,0 +1,262 @@
+package com.wenge.model.strategy.llmStrategy;
+
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONObject;
+import cn.hutool.json.JSONUtil;
+import com.wenge.model.constants.AnswerStrategyContant;
+import com.wenge.model.constants.LlmConstant;
+import com.wenge.model.dto.result.AnswerStepData;
+import com.wenge.model.entity.ApplicationInfo;
+import com.wenge.model.entity.LlmInfo;
+import com.wenge.model.entity.StepEntity;
+import com.wenge.model.enums.StepStatusEnum;
+import com.wenge.model.service.impl.DialogueServiceImpl;
+import com.wenge.model.utils.AnswerUtils;
+import com.wg.appframe.core.constant.StringConstant;
+import com.wg.appframe.yayi.api.DoubaoServer;
+import com.wg.appframe.yayi.entity.LlmTool;
+import com.wg.appframe.yayi.entity.YayiMessage;
+import com.wg.appframe.yayi.param.DoubaoCompletionParam;
+import com.wg.appframe.yayi.result.DoubaoCompletionResult;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.compress.utils.Lists;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+
+@Service(LlmConstant.DOUBAO)
+@Slf4j
+public class DoubaoStrategy implements LlmStrategy {
+
+    @Autowired
+    private DoubaoServer doubaoServer;
+
+    @Override
+    public String generate(String question, List<YayiMessage> messagesList, StepEntity step, boolean longFlag) {
+        return generate(question, messagesList, step, longFlag, null);
+    }
+
+    @Override
+    public String generate(String question, List<YayiMessage> messagesList, StepEntity step, boolean longFlag, Consumer<AnswerStepData> answerConsumer) {
+        // 从step中获取llmParam，该属性含有所有的大模型的参数
+        JSONObject param = step.getParam();
+        JSONObject jsonObject = null;
+        if (null != param && param.containsKey(AnswerStrategyContant.LLM_PARAM_OBJECT)) {
+            JSONObject llmParamObject = (JSONObject) param.getOrDefault(AnswerStrategyContant.LLM_PARAM_OBJECT, new JSONObject());
+            if (!llmParamObject.isEmpty()) {
+                jsonObject = llmParamObject;
+            }
+        }
+
+        // 优先使用step中的llmParam，如果没有则使用llmInfo
+        if (null == jsonObject) {
+            ApplicationInfo applicationInfo = DialogueServiceImpl.APPLICATION_INFO.get();
+            LlmInfo llmInfo = applicationInfo.getLlmInfo();
+            if (null == llmInfo) {
+                log.error("llmInfo is null");
+                return StringConstant.BLANK;
+            }
+            jsonObject = JSONUtil.parseObj(JSONUtil.toJsonStr(llmInfo));
+        }
+        JSONObject modelParam = new JSONObject();
+        jsonObject.forEach((k, v) -> {
+            modelParam.set(StrUtil.toUnderlineCase(k), v);
+            modelParam.set(k, v);
+        });
+
+        DoubaoCompletionParam doubaoCompletionParam = modelParam.toBean(DoubaoCompletionParam.class);
+        if (CollectionUtils.isEmpty(messagesList)) {
+            messagesList = Lists.newArrayList();
+        }
+        List<YayiMessage> messagess = messagesList.stream().map(p -> {
+            YayiMessage messages = new YayiMessage();
+            messages.setRole(p.getRole());
+            if (!"user".equals(p.getRole()) && !"system".equals(p.getRole())) {
+                messages.setRole("assistant");
+            }
+            messages.setContent(p.getContent());
+            return messages;
+        }).collect(Collectors.toList());
+
+        if (CollectionUtils.isEmpty(doubaoCompletionParam.getMessages())) {
+            doubaoCompletionParam.setMessages(messagess);
+        }
+        YayiMessage messages = new YayiMessage();
+        messages.setContent(question);
+        messages.setRole("user");
+        messagess.add(messages);
+        String result = "";
+        step.setPrompt(doubaoCompletionParam);
+
+        // 是否有消费者，消费大模型推流消息
+        if (answerConsumer != null) {
+            doubaoCompletionParam.setStream(true);
+            result = runStream(question, doubaoCompletionParam, answerConsumer, step);
+        } else {
+            doubaoCompletionParam.setStream(false);
+            result = doubaoServer.generateString(question, doubaoCompletionParam);
+            List<YayiMessage> messages1 = doubaoCompletionParam.getMessages();
+            YayiMessage messages2 = messages1.get(messages1.size() - 1);
+            messages2.setContent(question);
+            if (StringUtils.isBlank(result)) {
+                result = AnswerStrategyContant.NO_ANSWER_TEXT;
+            }
+            step.setResult(result);
+        }
+        return result;
+    }
+
+    /**
+     * 推流
+     * @param question
+     * @param doubaoCompletionParam
+     * @param answerConsumer
+     */
+    private String runStream(String question, DoubaoCompletionParam doubaoCompletionParam, Consumer<AnswerStepData> answerConsumer, StepEntity step) {
+        StringBuilder stream = new StringBuilder();
+        StringBuilder contentStream = new StringBuilder();
+        StringBuilder reasoningContentStream = new StringBuilder();
+        StringBuilder allStream = new StringBuilder();
+        step.setResult(StringConstant.BLANK);
+        // 大模型推流
+        doubaoServer.generateStream(question, doubaoCompletionParam, resultData -> {
+            //System.out.println("=>>>>" + JSON.toJSONString(resultData));
+            AnswerStepData stepData = new AnswerStepData();
+            if (null == resultData) {
+                AnswerUtils.notify(stepData, answerConsumer);
+                return;
+            }
+            List<DoubaoCompletionResult.Choice> choices = resultData.getChoices();
+            if (CollectionUtils.isEmpty(choices)) {
+                AnswerUtils.notify(stepData, answerConsumer);
+                return;
+            }
+            DoubaoCompletionResult.Choice generateChoice = resultData.getChoices().get(0);
+            String finishReason1 = generateChoice.getFinish_reason();
+            DoubaoCompletionResult.ChoiceDelta message = generateChoice.getDelta();
+            if (null == message) {
+                AnswerUtils.notify(stepData, answerConsumer);
+                return;
+            }
+            String finishReason = generateChoice.getFinish_reason();
+            String content = message.getContent();
+            if (null != content) {
+                allStream.append(content);
+            }
+            String reasoningContent = message.getReasoning_content();
+            if (null != reasoningContent) {
+                allStream.append(reasoningContent);
+            }
+            // 处理大模型推流内容
+            DeepseekStrategy.dealContent(reasoningContent, content, contentStream, reasoningContentStream, stream);
+            // if (null != content) {
+            //     stream.append(content);
+            // }
+            stepData.setAnswer(stream.toString());
+            stepData.setReasoningContent(reasoningContentStream.toString());
+
+            // 推流结束
+            // log.info("finishReason:{},finishReason1:{}", finishReason, finishReason1);
+            if ("stop".equals(finishReason) || "stop".equals(finishReason1)) {
+                stepData.setStatus(StepStatusEnum.ANSWER_COMPLETE);
+                answerConsumer.accept(stepData);
+            } else {
+                stepData.setStatus(StepStatusEnum.ANSWER_PROCESS);
+            }
+
+            if (!"\\".equals(reasoningContent) && !"\\".equals(content)) {
+                answerConsumer.accept(stepData);
+            }
+            step.setResult(allStream.toString());
+        });
+        return step.getResult().toString();
+    }
+
+    @Override
+    public List<YayiMessage.ToolCall> generateTools(String question, List<YayiMessage> messagesList, StepEntity step) {
+        // 从step中获取llmParam，该属性含有所有的大模型的参数
+        JSONObject param = step.getParam();
+        JSONObject jsonObject = null;
+        if (null != param && param.containsKey(AnswerStrategyContant.LLM_PARAM_OBJECT)) {
+            JSONObject llmParamObject = (JSONObject) param.getOrDefault(AnswerStrategyContant.LLM_PARAM_OBJECT, new JSONObject());
+            if (!llmParamObject.isEmpty()) {
+                jsonObject = llmParamObject;
+            }
+        }
+
+        // 优先使用step中的llmParam，如果没有则使用llmInfo
+        if (null == jsonObject) {
+            ApplicationInfo applicationInfo = DialogueServiceImpl.APPLICATION_INFO.get();
+            LlmInfo llmInfo = applicationInfo.getLlmInfo();
+            if (null == llmInfo) {
+                log.error("llmInfo is null");
+                return Lists.newArrayList();
+            }
+            jsonObject = JSONUtil.parseObj(JSONUtil.toJsonStr(llmInfo));
+        }
+        JSONObject modelParam = new JSONObject();
+        jsonObject.forEach((k, v) -> {
+            modelParam.put(StrUtil.toUnderlineCase(k), v);
+            modelParam.put(k, v);
+        });
+
+        log.info("doubaoCompletionParam:{}", modelParam);
+
+        DoubaoCompletionParam doubaoCompletionParam = modelParam.toBean(DoubaoCompletionParam.class);
+        if (CollectionUtils.isEmpty(messagesList)) {
+            messagesList = Lists.newArrayList();
+        }
+        List<YayiMessage> messagess = messagesList.stream().map(p -> {
+            YayiMessage messages = new YayiMessage();
+            messages.setRole(p.getRole());
+            if (!"user".equals(p.getRole()) && !"system".equals(p.getRole()) && !"tool".equals(p.getRole())) {
+                messages.setRole("assistant");
+            }
+            messages.setContent(p.getContent());
+            messages.setTool_calls(p.getTool_calls());
+            return messages;
+        }).collect(Collectors.toList());
+
+        if (CollectionUtils.isEmpty(doubaoCompletionParam.getMessages())) {
+            doubaoCompletionParam.setMessages(messagess);
+        }
+        YayiMessage messages = new YayiMessage();
+        messages.setContent(question);
+        messages.setRole("user");
+        messagess.add(messages);
+        step.setPrompt(doubaoCompletionParam);
+        doubaoCompletionParam.setMax_tokens(1024);
+
+        // 从step中获取llmParamTool，设置插件
+        if (null != param && param.containsKey(AnswerStrategyContant.LLM_PARAM_TOOL)) {
+            List<LlmTool> toolList = param.getBeanList(AnswerStrategyContant.LLM_PARAM_TOOL, LlmTool.class);
+            if (CollectionUtils.isNotEmpty(toolList)) {
+                List<DoubaoCompletionParam.Tool> tools = toolList.stream().map(p -> BeanUtil.toBean(p, DoubaoCompletionParam.Tool.class)).collect(Collectors.toList());
+                doubaoCompletionParam.setTools(tools);
+            }
+        }
+
+        // 是否有消费者，消费大模型推流消息
+        doubaoCompletionParam.setStream(false);
+        DoubaoCompletionResult generate = doubaoServer.generate(question, doubaoCompletionParam);
+        List<DoubaoCompletionResult.Choice> choices = generate.getChoices();
+        DoubaoCompletionResult.Choice generateChoice = choices.get(0);
+        String finishReason = generateChoice.getFinish_reason();
+        if ("tool_calls".equals(finishReason)) {
+            DoubaoCompletionResult.Message message = generateChoice.getMessage();
+            // 转换对象适应策略
+            List<DoubaoCompletionResult.MessageToolCall> toolCalls = message.getTool_calls();
+            List<YayiMessage.ToolCall> totalCallResult = BeanUtil.copyToList(toolCalls, YayiMessage.ToolCall.class);
+            step.setResult(totalCallResult);
+            return totalCallResult;
+        }
+        return Lists.newArrayList();
+    }
+
+}
