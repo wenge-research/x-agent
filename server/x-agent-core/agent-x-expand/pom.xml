@@ -69,9 +69,9 @@
 
     <repositories>
         <repository>
-            <id>wenge</id>
-            <name>admin</name>
-            <url>https://maven.wenge.com/repository/maven-public/</url>
+            <id>xxxxxx</id>
+            <name>xxxxx</name>
+            <url>xxxxx</url>
         </repository>
     </repositories>
 

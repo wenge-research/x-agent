@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.wenge</groupId>
+    <artifactId>wg-yayi</artifactId>
+    <version>1.9.3.RELEASES</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <lombok.version>1.18.24</lombok.version>
+        <hutool.all.version>5.8.3</hutool.all.version>
+        <common.lang3.version>3.12.0</common.lang3.version>
+        <jasypt.version>3.0.4</jasypt.version>
+        <fastjson2.version>2.0.43</fastjson2.version>
+        <knife4j.version>3.0.3</knife4j.version>
+        <alibaba.transmittable.version>2.13.0</alibaba.transmittable.version>
+        <spring-boot-starter.version>2.7.1</spring-boot-starter.version>
+        <io.jsonwebtoken.jjwt.version>0.9.1</io.jsonwebtoken.jjwt.version>
+        <spring.jwt.version>1.1.1.RELEASE</spring.jwt.version>
+        <spring.oauth2.version>2.2.5.RELEASE</spring.oauth2.version>
+        <cloud-context.version>3.1.3</cloud-context.version>
+        <appframe-yayi-sersver.version>1.9.6.RELEASES</appframe-yayi-sersver.version>
+        <appframe-redis-starter.version>1.1.6.RELEASES</appframe-redis-starter.version>
+        <appframe-elasticsearch-starter.version>1.0.6.RELEASES</appframe-elasticsearch-starter.version>
+        <appframe-deploy-starter.version>1.5.5.RELEASES</appframe-deploy-starter.version>
+        <appframe-mybatis-plus-starter.version>mysql-1.2.RELEASES</appframe-mybatis-plus-starter.version>
+        <appframe-graylog-starter>1.1.RELEASES</appframe-graylog-starter>
+        <appframe-wos-starter>1.3.0.RELEASES</appframe-wos-starter>
+        <elasticsearch.version>7.14.0</elasticsearch.version>
+        <spring-boot.version>2.6.13</spring-boot.version>
+        <appframe-core.version>1.5.6.RELEASES</appframe-core.version>
+        <appframe-mybatis-flex.version>mysql-1.7.4.RELEASES</appframe-mybatis-flex.version>
+        <appframe-cloud.version>1.2.RELEASES</appframe-cloud.version>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.wenge</groupId>
+            <artifactId>appframe-comon-core</artifactId>
+            <version>${appframe-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.elasticsearch.client</groupId>
+                    <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.elasticsearch</groupId>
+                    <artifactId>elasticsearch</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-comon-core</artifactId>
+                <version>${appframe-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common.lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.all.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-ui</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${alibaba.transmittable.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${io.jsonwebtoken.jjwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-jwt</artifactId>
+                <version>${spring.jwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-context</artifactId>
+                <version>${cloud-context.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-oauth2</artifactId>
+                <version>${spring.oauth2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-yayi-sersver</artifactId>
+                <version>${appframe-yayi-sersver.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-redis-starter</artifactId>
+                <version>${appframe-redis-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-elasticsearch-starter</artifactId>
+                <version>${appframe-elasticsearch-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-deploy-starter</artifactId>
+                <version>${appframe-deploy-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-mybatis-plus-starter</artifactId>
+                <version>${appframe-mybatis-plus-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-graylog-starter</artifactId>
+                <version>${appframe-graylog-starter}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-wos-starter</artifactId>
+                <version>${appframe-wos-starter}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-mybatis-flex-starter</artifactId>
+                <version>${appframe-mybatis-flex.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wenge</groupId>
+                <artifactId>appframe-cloud-starter</artifactId>
+                <version>${appframe-cloud.version}</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-releases</name>
+            <url>http://xxxxxxx/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>http://xxxxxxxx/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

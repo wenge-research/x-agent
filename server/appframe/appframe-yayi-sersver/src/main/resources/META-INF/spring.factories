@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.wg.appframe.yayi.config.YayiAutoConfigure
+org.springframework.context.ApplicationContextInitializer=\
+com.wg.appframe.yayi.config.YayiAutoConfigure

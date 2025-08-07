@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.wg.appframe.wos.config.WosAutoConfigure
+org.springframework.context.ApplicationContextInitializer=\
+com.wg.appframe.wos.config.WosAutoConfigure

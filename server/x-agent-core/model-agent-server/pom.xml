@@ -197,18 +197,6 @@
             <version>8.6.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.bytedeco/javacv-platform -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.bytedeco</groupId>-->
-        <!--            <artifactId>javacv-platform</artifactId>-->
-        <!--            <version>1.5.11</version>-->
-        <!--        </dependency>-->
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.bytedeco/ffmpeg-platform &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.bytedeco</groupId>-->
-        <!--            <artifactId>ffmpeg-platform</artifactId>-->
-        <!--            <version>7.1-1.5.11</version>-->
-        <!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -242,9 +230,9 @@
 
     <repositories>
         <repository>
-            <id>wenge</id>
-            <name>admin</name>
-            <url>https://maven.wenge.com/repository/maven-public/</url>
+            <id>xxxxxx</id>
+            <name>xxx</name>
+            <url>xxxxxxx</url>
         </repository>
     </repositories>
 
