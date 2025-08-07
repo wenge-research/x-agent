@@ -1,6 +1,6 @@
 /log/
 /logs/
-**/target/
+agent-x-task/target/
 
 
 ### IntelliJ IDEA ###
