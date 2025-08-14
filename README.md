@@ -101,5 +101,6 @@ docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencen
 - 中间件：elasticsearch,redis,minio,nginx
 
 ## 联系工作人员
+[img.png](https://dibrain.wenge.com/smart-agent-api-uat/wos/file/download?fileKey=agent_source/github.png")
 <p align="center"><img src= "https://dibrain.wenge.com/smart-agent-api-uat/wos/file/download?fileKey=agent_source/github.png" alt="x-agent" width="200" /></p>
 
