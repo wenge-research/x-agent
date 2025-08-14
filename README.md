@@ -101,4 +101,4 @@ docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencen
 - 中间件：elasticsearch,redis,minio,nginx
 
 ## 联系工作人员
-![github.png](github.png)
+<img src="./worker.png" alt="图片描述" width="200" />
