@@ -100,5 +100,5 @@ docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencen
 -  数据库： mysql
 - 中间件：elasticsearch,redis,minio,nginx
 
-## 联系工作人员  
-<img src= "https://dibrain.wenge.com/smart-agent-api-uat/wos/file/download?fileKey=agent_source/github.png"  alt="中科闻歌"/>
+## 联系工作人员
+![github.png](github.png)
