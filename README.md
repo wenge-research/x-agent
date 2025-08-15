@@ -21,7 +21,7 @@ docker volume create agent-x-cicd
 docker pull ccr.ccs.tencentyun.com/wenge/agent-x:agent-x_no_bge_250815_05
 docker run  -d --restart=always -p 80:80 -p 443:443 -p 8848:8848 -p 3306:3306 -p 6379:6379 -p 9200:9200 -p 9000:9000 -p 9001:9001 -e IP_ADDR="127.0.0.1:80" -v agent-x-data:/u01/isi -v agent-x-cicd:/app/agent/server  --name agent-x  ccr.ccs.tencentyun.com/wenge/agent-x:agent-x_no_bge_250815_05
 ```
-访问管理后台 `http://127.0.0.1:1000/wg-agent-manage/#/appmanage` 
+访问管理后台 `http://127.0.0.1:80/wg-agent-manage/#/appmanage` 
 
 - 账号: agent-x
 - 密码: 04p9xa0gAE*%&Op8
