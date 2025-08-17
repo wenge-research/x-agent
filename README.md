@@ -36,6 +36,7 @@ docker run  -d --restart=always -p 80:80 -p 443:443 -p 8848:8848 -p 3306:3306 -p
 > 127.0.0.1:3306
 > - 账号: root
 > - 密码: 2ievD%GBA6
+> - 主库：smart_customer_agent
 
 ## 访问minio
 > http://127.0.0.1:9000
