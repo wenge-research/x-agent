@@ -26,6 +26,23 @@ docker run  -d --restart=always -p 80:80 -p 443:443 -p 8848:8848 -p 3306:3306 -p
 - 账号: agent-x
 - 密码: 04p9xa0gAE*%&Op8
 
+
+## 访问 nacos
+> http://127.0.0.1:8848/nacos/
+> - 账号: nacos
+> - 密码: k2j210w5CKKO!&Wh0
+
+## 连接数据 mysql
+> 127.0.0.1:3306
+> - 账号: root
+> - 密码: 2ievD%GBA6
+
+## 访问minio
+> http://127.0.0.1:9000
+> - 账号: admin
+> - 密码: 6838BHE%%C472
+
+
 ## 启动算法服务
 
 ```bash
