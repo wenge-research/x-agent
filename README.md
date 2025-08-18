@@ -110,6 +110,45 @@ docker pull ccr.ccs.tencentyun.com/wenge/agent-x:contentparse.v4.7
 docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencentyun.com/wenge/agent-x:contentparse.v4.7
 ```
 
+### nacos配置项
+```yaml
+appframe:
+  yayi:
+    # 文档智能解析，对应contentparse.v4.7镜像
+    contentparsingnewversion:
+      uri: http://172.17.0.0.1:9099/analysis
+    # 重排序服务，对应镜像reranker.v1
+    rearrange:
+      uri: http://172.17.0.0.1:9098/analysis
+
+# 网页快照
+screenshot:
+  # 图片上传
+  uploadUrl: http://172.17.0.1:80/smart-agent-api/wos/file/upload
+  # 网页截图
+  api: http://172.17.0.1:5028/capture-screenshot
+
+# mcp服务api
+mcp:
+  serviceApi: http://172.17.0.1:4011/service
+  queryApi: http://172.17.0.1:4011/query
+  buildMcpApi: http://172.17.0.1:4011/deploy_service
+  # MCP_nl2sql
+  textToSqlSse: http://172.17.0.1:1025/get_answer_text2sql
+
+workflow:
+  default:
+    # 工作流代码节点
+    codeApi: http://172.17.0.1:1216/execute
+    startRewriteModelId: 87026c3464664ad49a8b622ec719fa70
+```
+
+```mysql
+-- 更新向量模型，对应启动向量模型
+use smart_customer_agent;
+update smart_customer_agent.dense_vector set uri='http://172.17.0.1:10822/analysis' where code = 'local_bge_768';
+```
+
 ## 技术栈
 
 - 前端： vue
