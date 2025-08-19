@@ -163,16 +163,6 @@ update smart_customer_agent.dense_vector set uri='http://172.17.0.1:10822/analys
 -  数据库： mysql
 - 中间件：elasticsearch,redis,minio,nginx
 
-### 相关脚本
-```shell
-# 启动所有服务
-docker-compose up -d
-# 查看运行状态
-docker-compose ps
-# 查看日志
-docker-compose logs -f [服务名]
-```
-
 ### docker-compose.yml
 ```yaml
 
@@ -287,6 +277,17 @@ volumes:
   agent-x-cicd:
     external: true  # 对应你之前创建的 docker volume create agent-x-cicd
 
+```
+
+
+### 相关脚本
+```shell
+# 启动所有服务
+docker-compose up -d
+# 查看运行状态
+docker-compose ps
+# 查看日志
+docker-compose logs -f [服务名]
 ```
 
 ## 联系工作人员
