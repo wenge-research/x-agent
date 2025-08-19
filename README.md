@@ -110,6 +110,12 @@ docker pull ccr.ccs.tencentyun.com/wenge/agent-x:contentparse.v4.7
 docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencentyun.com/wenge/agent-x:contentparse.v4.7
 ```
 
+### 11.文档切片
+```bash
+docker pull ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
+docker run -d -p 9097:8080 --restart=always  --name doc_answer_noes ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
+```
+
 ---
 > **注意**：如果默认服务的 ip 和端口有变动，请调整对应的配置项！
 ### nacos配置项
@@ -122,7 +128,9 @@ appframe:
     # 9.重排序服务
     rearrange:
       uri: http://172.17.0.0.1:9098/analysis
-
+    # 11.文档切片
+    knowledgesplit:
+      uri: http://172.17.0.1:9097/analysis
 # 网页快照
 screenshot:
   # 图片上传
@@ -269,6 +277,13 @@ services:
     restart: always
     ports:
       - "9099:8080" #默认端口9099，如果默认端口9099有变动，请修改 nacos 的配置项: appframe.yayi.contentparsingnewversion.uri: http://172.17.0.0.1:9099/analysis
+
+  doc_answer_noes:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
+    container_name: doc_answer_noes
+    restart: always
+    ports:
+      - "9097:8080" #默认端口9097，如果默认端口9097有变动，请修改 nacos 的配置项: appframe.yayi.knowledgesplit.uri: http://172.17.0.0.1:9097/analysis
 
 # ========== 数据卷定义 ==========
 volumes:
