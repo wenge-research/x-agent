@@ -113,7 +113,7 @@ docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencen
 ### 11.文档切片
 ```bash
 docker pull ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
-docker run -d -p 9097:8080 --restart=always -v /u01/isi/code_sdk/doc_answer_config/config.yml:/code/config/config.yml  --name yayi-plugin-doc-answer-250623 ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
+docker run -d -p 9097:8080 --restart=always  --name yayi-plugin-doc-answer-250623 ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
 ```
 
 ---
@@ -282,8 +282,6 @@ services:
     image: ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
     container_name: doc_answer_noes
     restart: always
-    volumes:
-      - /u01/isi/code_sdk/doc_answer_config/config.yml:/code/config/config.yml
     ports:
       - "9097:8080" #默认端口9097，如果默认端口9097有变动，请修改 nacos 的配置项: appframe.yayi.knowledgesplit.uri: http://172.17.0.0.1:9097/analysis
 
