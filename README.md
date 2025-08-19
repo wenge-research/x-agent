@@ -75,7 +75,7 @@ docker run -d -v /u01/isi/code_sdk/MCP/config.yml:/app/config.yml -v /u01/isi/co
 
 ### 5.本地自定义安装 mcp
 ```bash
-docker run -d --net host -v /u01/isi/code_sdk/Auto_mcp/config.yml:/app/config.yml -v /u01/isi/code_sdk/Auto_mcp/main.py:/app/main.py  -v  /u01/isi/code_sdk/Auto_mcp/mcp_file:/app/mcp_file ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
+docker run -d --name algorithm-local-mcp --net host -v /u01/isi/code_sdk/Auto_mcp/config.yml:/app/config.yml -v /u01/isi/code_sdk/Auto_mcp/main.py:/app/main.py  -v  /u01/isi/code_sdk/Auto_mcp/mcp_file:/app/mcp_file ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
 ```
 
 ### 6.MCP_nl2sql
@@ -113,7 +113,7 @@ docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencen
 ### 11.文档切片
 ```bash
 docker pull ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
-docker run -d -p 9097:8080 --restart=always  --name doc_answer_noes ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
+docker run -d -p 9097:8080 --restart=always -v /u01/isi/code_sdk/doc_answer_config/config.yml:/code/config/config.yml  --name yayi-plugin-doc-answer-250623 ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
 ```
 
 ---
@@ -282,6 +282,8 @@ services:
     image: ccr.ccs.tencentyun.com/wenge/agent-x:doc_answer_noes_nosql.v1.2.8-build2503143-encrypted
     container_name: doc_answer_noes
     restart: always
+    volumes:
+      - /u01/isi/code_sdk/doc_answer_config/config.yml:/code/config/config.yml
     ports:
       - "9097:8080" #默认端口9097，如果默认端口9097有变动，请修改 nacos 的配置项: appframe.yayi.knowledgesplit.uri: http://172.17.0.0.1:9097/analysis
 
