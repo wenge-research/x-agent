@@ -53,32 +53,32 @@ mkdir -p /u01/isi/code_sdk
 unzip Agent_X.zip
 ```
 
-### 启动向量模型
+### 1.启动向量模型
 ```bash
 docker run -d -v /u01/isi/code_sdk/Embedding_model/config.yml:/app/config.yml -v /u01/isi/code_sdk/Embedding_model/main.py:/app/main.py  -p 10822:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
 ```
 
-### 工作流代码节点
+### 2.工作流代码节点
 ```bash
 docker run -d -v /u01/isi/code_sdk/Code_node/main.py:/app/main.py  -p 1216:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
 ```
 
-### 智能问数（NL2SQL）
+### 3.智能问数（NL2SQL）
 ```bash
 docker run -d -v /u01/isi/code_sdk/Nl2sql/config.yaml:/app/config.yaml -v /u01/isi/code_sdk/Nl2sql/main.py:/app/main.py  -p 1025:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
 ```
 
-### MCP
+### 4.MCP
 ```bash
 docker run -d -v /u01/isi/code_sdk/MCP/config.yml:/app/config.yml -v /u01/isi/code_sdk/MCP/main.py:/app/main.py  -p 4011:8080  ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
 ```
 
-### 本地自定义安装 mcp
+### 5.本地自定义安装 mcp
 ```bash
 docker run -d --net host -v /u01/isi/code_sdk/Auto_mcp/config.yml:/app/config.yml -v /u01/isi/code_sdk/Auto_mcp/main.py:/app/main.py  -v  /u01/isi/code_sdk/Auto_mcp/mcp_file:/app/mcp_file ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
 ```
 
-### MCP_nl2sql
+### 6.MCP_nl2sql
 ```bash
 docker run -d -v /u01/isi/code_sdk/mcp_sql/config.yaml:/app/config.yaml -v /u01/isi/code_sdk/mcp_sql/main.py:/app/main.py  -p 4016:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
 ```
@@ -87,37 +87,39 @@ docker run -d -v /u01/isi/code_sdk/mcp_sql/config.yaml:/app/config.yaml -v /u01/
 docker pull ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_chrome_v2
 ```
 
-### 单网页内容爬取
+### 7.单网页内容爬取
 ```bash
 docker run -d -v /u01/isi/code_sdk/URL_analysis/config.yml:/app/config.yml -v /u01/isi/code_sdk/URL_analysis/main.py:/app/main.py  -p 9007:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_chrome_v2
 ```
 
-### 网页截图
+### 8.网页截图
 ```bash
 docker run -d -v /u01/isi/code_sdk/URL_to_img/config.yml:/app/config.yml -v /u01/isi/code_sdk/URL_to_img/main.py:/app/main.py  -p 5028:8080 ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_chrome_v2
 ```
 
 ## yayi算法
-### 重排序服务
+### 9.重排序服务
 ```bash
 docker pull ccr.ccs.tencentyun.com/wenge/agent-x:reranker.v1
 docker run -d -p 9098:8080 --restart=always --name reranker ccr.ccs.tencentyun.com/wenge/agent-x:reranker.v1
 ```
 
-### 文档智能解析
+### 10.文档智能解析
 ```bash
 docker pull ccr.ccs.tencentyun.com/wenge/agent-x:contentparse.v4.7
 docker run -d -p 9099:8080 --restart=always  --name content_parse ccr.ccs.tencentyun.com/wenge/agent-x:contentparse.v4.7
 ```
 
+---
+> **注意**：如果默认服务的 ip 和端口有变动，请调整对应的配置项！
 ### nacos配置项
 ```yaml
 appframe:
   yayi:
-    # 文档智能解析，对应contentparse.v4.7镜像
+    # 10.文档智能解析
     contentparsingnewversion:
       uri: http://172.17.0.0.1:9099/analysis
-    # 重排序服务，对应镜像reranker.v1
+    # 9.重排序服务
     rearrange:
       uri: http://172.17.0.0.1:9098/analysis
 
@@ -125,26 +127,30 @@ appframe:
 screenshot:
   # 图片上传
   uploadUrl: http://172.17.0.1:80/smart-agent-api/wos/file/upload
-  # 网页截图
+  # 8.网页截图
   api: http://172.17.0.1:5028/capture-screenshot
 
 # mcp服务api
 mcp:
+  # 4.MCP
   serviceApi: http://172.17.0.1:4011/service
+  # 4.MCP
   queryApi: http://172.17.0.1:4011/query
+  # 5.本地自定义安装 mcp
   buildMcpApi: http://172.17.0.1:4011/deploy_service
-  # MCP_nl2sql
+  # 3.智能问数（NL2SQL）
   textToSqlSse: http://172.17.0.1:1025/get_answer_text2sql
 
 workflow:
   default:
-    # 工作流代码节点
+    # 2.工作流代码节点
     codeApi: http://172.17.0.1:1216/execute
+    # 开始节点的改写时使用的大模型 id（llm_info表的 model_id字段）
     startRewriteModelId: 87026c3464664ad49a8b622ec719fa70
 ```
-
+### MYSQL配置
 ```mysql
--- 更新向量模型，对应启动向量模型
+-- 1.启动向量模型
 use smart_customer_agent;
 update smart_customer_agent.dense_vector set uri='http://172.17.0.1:10822/analysis' where code = 'local_bge_768';
 ```
@@ -156,6 +162,132 @@ update smart_customer_agent.dense_vector set uri='http://172.17.0.1:10822/analys
 -  算法： python
 -  数据库： mysql
 - 中间件：elasticsearch,redis,minio,nginx
+
+### 相关脚本
+```shell
+# 启动所有服务
+docker-compose up -d
+# 查看运行状态
+docker-compose ps
+# 查看日志
+docker-compose logs -f [服务名]
+```
+
+### docker-compose.yml
+```yaml
+
+version: '3.8'
+services:
+  # ========== 主服务：x-agent ==========
+  agent-x:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:agent-x_no_bge_250815_05
+    container_name: agent-x
+    restart: always
+    ports:
+      - "80:80"     # 替换为浏览器将要访问的端口，与IP_ADDR参数的端口一致
+      - "443:443"	# https
+      - "8848:8848" # Nacos
+      - "3306:3306" # MySQL
+      - "6379:6379" # Redis
+      - "9200:9200" # Elasticsearch
+      - "9000:9000" # MinIO
+      - "9001:9001" # MinIO
+    environment:
+      - IP_ADDR=127.0.0.1:80 # 替换为浏览器将要访问的 ip 和端口
+    volumes:
+      - agent-x-data:/u01/isi
+      - agent-x-cicd:/app/agent/server
+
+  # ========== 算法服务 ==========
+  # 1. 向量模型
+  algorithm-vector:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
+    container_name: algorithm-vector
+    restart: always
+    ports:
+      - "10822:8080"  # 默认端口10822，如果默认端口10822有变动，请修改 mysql 的配置项:use smart_customer_agent; update smart_customer_agent.dense_vector set uri='http://172.17.0.1:10822/analysis' where code = 'local_bge_768';
+    volumes:
+      - ./code_sdk/Embedding_model/config.yml:/app/config.yml
+      - ./code_sdk/Embedding_model/main.py:/app/main.py
+
+  # 2. 工作流代码节点
+  algorithm-code-node:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
+    container_name: algorithm-code-node
+    restart: always
+    ports:
+      - "1216:8080"  #默认端口1216，如果默认端口1216有变动，请修改 nacos 的配置项: workflow.default.codeApi: http://172.17.0.1:1216/execute
+    volumes:
+      - ./code_sdk/Code_node/main.py:/app/main.py
+
+  # 3. 智能问数（NL2SQL）
+  algorithm-nl2sql:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
+    container_name: algorithm-nl2sql
+    restart: always
+    ports:
+      - "1025:8080" #默认端口1025，如果默认端口1025有变动，请修改 nacos 的配置项: mcp.textToSqlSse: http://172.17.0.1:1025/get_answer_text2sql
+    volumes:
+      - ./code_sdk/Nl2sql/config.yaml:/app/config.yaml
+      - ./code_sdk/Nl2sql/main.py:/app/main.py
+
+  # 4. MCP
+  algorithm-mcp:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
+    container_name: algorithm-mcp
+    restart: always
+    ports:
+      - "4011:8080" #默认端口4011，如果默认端口4011有变动，请修改 nacos 的配置项: mcp.buildMcpApi: http://172.17.0.1:4011/deploy_service
+    volumes:
+      - ./code_sdk/MCP/config.yml:/app/config.yml
+      - ./code_sdk/MCP/main.py:/app/main.py
+
+  # 5. 本地自定义 MCP (使用 host 网络)
+  algorithm-local-mcp:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_v2
+    container_name: algorithm-local-mcp
+    restart: always
+    network_mode: host  # 使用宿主机网络
+    volumes:
+      - ./code_sdk/Auto_mcp/config.yml:/app/config.yml
+      - ./code_sdk/Auto_mcp/main.py:/app/main.py
+      - ./code_sdk/Auto_mcp/mcp_file:/app/mcp_file
+
+  # 8. 网页截图
+  algorithm-url-to-img:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:algorithm_chrome_v2
+    container_name: algorithm-url-to-img
+    restart: always
+    ports:
+      - "5028:8080" #默认端口5028，如果默认端口5028有变动，请修改 nacos 的配置项: screenshot.api: http://172.17.0.1:5028/capture-screenshot
+    volumes:
+      - ./code_sdk/URL_to_img/config.yml:/app/config.yml
+      - ./code_sdk/URL_to_img/main.py:/app/main.py
+
+  # 9. 重排序服务 (yayi)
+  algorithm-reranker:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:reranker.v1
+    container_name: algorithm-reranker
+    restart: always
+    ports:
+      - "9098:8080" #默认端口9098，如果默认端口9098有变动，请修改 nacos 的配置项: appframe.yayi.rearrange.uri: http://172.17.0.0.1:9098/analysis
+
+  # 10. 文档智能解析 (yayi)
+  algorithm-content-parse:
+    image: ccr.ccs.tencentyun.com/wenge/agent-x:contentparse.v4.7
+    container_name: algorithm-content-parse
+    restart: always
+    ports:
+      - "9099:8080" #默认端口9099，如果默认端口9099有变动，请修改 nacos 的配置项: appframe.yayi.contentparsingnewversion.uri: http://172.17.0.0.1:9099/analysis
+
+# ========== 数据卷定义 ==========
+volumes:
+  agent-x-data:
+    external: true  # 对应你之前创建的 docker volume create agent-x-data
+  agent-x-cicd:
+    external: true  # 对应你之前创建的 docker volume create agent-x-cicd
+
+```
 
 ## 联系工作人员
 <img src="./worker.png" alt="图片描述" width="200" />
